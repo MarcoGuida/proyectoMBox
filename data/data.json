@@ -9,15 +9,15 @@
         "tarea": [
           {
             "hora": "0800",
-            "imagen": "urlimagen",
-            "titulo": "Un titulo",
-            "texto": "Una tarea del lunes"
+            "image": "------------urlimagen",
+            "title": "------------Un titulo",
+            "description": "------------Una tarea del lunes"
           },
           {
             "hora": "0800",
-            "imagen": "urlimagen",
-            "titulo": "Un titulo",
-            "texto": "Una tarea del lunes"
+            "image": "urlimagen",
+            "title": "Un titulo",
+            "description": "Una tarea del lunes"
           }
         ]
       },

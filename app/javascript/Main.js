@@ -17,23 +17,20 @@ var Main = (function() {
 
 	function _paintData(jsonDataRecv)
 	{
-		alert("_paintData");
-		//numEnlaces=jsonDataRecv.length;
+		//alert("_paintData");
 		
-		var enlace= document.createElement("div");  
-		enlace.innerHTML = "<div id=\"enlace\">"+jsonDataRecv.lun.tarea[0].hora+"</div>";
-		document.getElementById("info").appendChild(enlace);
-//		for(var i=0;i<numEnlaces;i++)
-//		{
-//		var enlace= document.createElement("div");        
-//		//var imagen=document.createElement("img");
-//		//imagen.innerHTML = "<img src=\""+jsonDataRecv[i].thumbnail+"\"  height=\"160\" width=\"90\" > ";
-//		
-//		//var enlaceCorto=(jsonDataRecv[i].qualities.filePath).split("/");
-//		enlace.innerHTML = "<div id=\"enlace"+i+"\"> mmmmm"+jsonDataRecv[i].lun.tarea[0].hora+"----</div>";     
-//		//document.getElementById("info").appendChild(imagen);
-//		document.getElementById("cabecera").appendChild(enlace);
-//		//document.getElementById("enlace0").style.border = "8px solid blue";
+		var title= document.createElement("div"); 
+		var image= document.createElement("div"); 
+		var description= document.createElement("div"); 
+		
+		title.innerHTML = "<div id=\"title\">"+jsonDataRecv.lun.tarea[0].title+"</div>";
+		image.innerHTML = "<div id=\"image\">"+jsonDataRecv.lun.tarea[0].image+"</div>";
+		description.innerHTML = "<div id=\"description\">"+jsonDataRecv.lun.tarea[0].description+"</div>";
+
+		document.getElementById("info").appendChild(title);
+		document.getElementById("info").appendChild(image);
+		document.getElementById("info").appendChild(description);
+		
 //		}
 	};
 	
