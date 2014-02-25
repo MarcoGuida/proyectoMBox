@@ -1,0 +1,67 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* Layout */
+body {
+	width: 1280px;
+	height: 720px;
+	background-color: white;
+}
+
+#cabecera {
+	width: 1280px;
+	height: 80px;
+	
+}
+
+#cuerpo {
+	width: 1280px;
+	height: 595px;
+}
+
+#cuatroBotones {
+	width: 320px;
+	height: 490px;
+	float: left;
+}
+
+#redButton {
+	background-color: red;
+	width: 100px;
+	height: 50px;
+	float: left;
+}
+
+#greenButton {
+	background-color: green;
+	width: 100px;
+	height: 50px;
+	float: left;
+}
+
+#blueButton {
+	background-color: blue;
+	width: 100px;
+	height: 50px;
+	float: left;}
+
+#yellowButton {
+	background-color: yellow;
+	width: 100px;
+	height: 50px;
+	float: left;
+}
+
+#info {
+	width: 640px;
+	height: 595px;
+	float: left;
+}
+
+#pie {
+	width: 1280px;
+	height: 45px;
+}

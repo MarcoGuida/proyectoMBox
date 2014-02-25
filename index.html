@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Ejercicio1</title>
+
+		<!-- TODO : Common API -->
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+
+		<!-- TODO : Javascript code -->
+		<script language="javascript" type="text/javascript" src="app/javascript/Main.js"></script>
+		<script language="javascript" type="text/javascript" src="app/javascript/audioList.js"></script>
+
+		<!-- TODO : Style sheets code -->
+		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+
+		<!-- TODO: Plugins -->
+
+	</head>
+
+	<body onload="Main.onLoad();" onunload="Main.onUnload();" >
+
+		<!-- Dummy anchor as focus for key events -->
+		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+
+		<!-- TODO: your code here -->
+		
+		<div id="cabecera">cabecera</div>
+		
+		<div id="cuerpo">
+			<div id="cuatroBotones">
+				<div id="redButton"></div>
+				<div id="greenButton"></div>
+				<div style="clear:both;"></div>
+				<div id="blueButton"></div>
+				<div id="yellowButton"></div>
+				
+			</div>
+			<div id="info"></div>
+		</div>
+		<div id="pie">pie</div>
+
+		<object id="pluginNnavi" classid="clsid:SAMSUNG-INFOLINK-NNAVI"></object>
+		<object id="pluginAudio" classid="clsid:SAMSUNG-INFOLINK-AUDIO"></object>
+	</body>
+</html>
