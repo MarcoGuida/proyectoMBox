@@ -1,28 +1,15 @@
 var Main = (function() {
 	var widgetAPI = new Common.API.Widget();
 	var tvKey = new Common.API.TVKeyValue();
-	var textFirmware = "";
-	var volume = "";
 	var numEnlaces=0;
-	var enlaceMarcado=0;
+	//var enlaceMarcado=0;
 	
 	function _onLoad() {
-
 		try {
-
 			_enableKeys();
 			widgetAPI.sendReadyEvent();
-			//var nnavi = document.getElementById("pluginNnavi");
-			//var audio = document.getElementById("pluginAudio");
-			//var firmware = nnavi.GetFirmware();
-			//document.getElementById("info").innerHTML = firmware;
-			//textFirmware = firmware;
-
-			//volumen = audio.GetVolume();
-			audioList.init(Main.paintData);
+			userList.init(Main.paintData);
 			alert("fin onLoad");
-
-			
 		} catch (e) {
 			alert(e);
 		}
@@ -31,20 +18,23 @@ var Main = (function() {
 	function _paintData(jsonDataRecv)
 	{
 		alert("_paintData");
-		numEnlaces=jsonDataRecv.length;
-		for(var i=0;i<numEnlaces;i++)
-		{
-		alert(i+" - "+jsonDataRecv[i]);
-		var enlace= document.createElement("div");        
-		var imagen=document.createElement("img");
-		imagen.innerHTML = "<img src=\""+jsonDataRecv[i].thumbnail+"\"  height=\"160\" width=\"90\" > ";
+		//numEnlaces=jsonDataRecv.length;
 		
-		var enlaceCorto=(jsonDataRecv[i].qualities.filePath).split("/");
-		enlace.innerHTML = "<div id=\"enlace"+i+"\">"+jsonDataRecv[i].shortTitle+" <->  "+enlaceCorto[enlaceCorto.length-1]+"</div>";     
-		document.getElementById("info").appendChild(imagen);
+		var enlace= document.createElement("div");  
+		enlace.innerHTML = "<div id=\"enlace\">"+jsonDataRecv.lun.tarea[0].hora+"</div>";
 		document.getElementById("info").appendChild(enlace);
-		document.getElementById("enlace0").style.border = "8px solid blue";
-		}
+//		for(var i=0;i<numEnlaces;i++)
+//		{
+//		var enlace= document.createElement("div");        
+//		//var imagen=document.createElement("img");
+//		//imagen.innerHTML = "<img src=\""+jsonDataRecv[i].thumbnail+"\"  height=\"160\" width=\"90\" > ";
+//		
+//		//var enlaceCorto=(jsonDataRecv[i].qualities.filePath).split("/");
+//		enlace.innerHTML = "<div id=\"enlace"+i+"\"> mmmmm"+jsonDataRecv[i].lun.tarea[0].hora+"----</div>";     
+//		//document.getElementById("info").appendChild(imagen);
+//		document.getElementById("cabecera").appendChild(enlace);
+//		//document.getElementById("enlace0").style.border = "8px solid blue";
+//		}
 	};
 	
 	function _onUnload() {
@@ -60,12 +50,6 @@ var Main = (function() {
 	 */
 
 	function resetButtons() {
-//		document.getElementById("greenButton").style.border = "0px";
-//		document.getElementById("redButton").style.border = "0px";
-//		document.getElementById("yellowButton").style.border = "0px";
-//		document.getElementById("blueButton").style.border = "0px";
-//
-//		widgetAPI.putInnerHTML(info, textFirmware);
 		
 		for(var i=0;i<numEnlaces;i++)
 			{

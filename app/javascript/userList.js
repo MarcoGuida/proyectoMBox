@@ -1,14 +1,4 @@
-/********************************************************************
- *********************************************************************
- **
- **  Autor ilopez@magicbox.es
- **
- **  Modulo encargado de adquirir el fichero json de Audios y gestionarlo
- ** 
- **
- *********************************************************************
- ********************************************************************/
-var audioList = (function() {
+var userList = (function() {
     /*
      * Constante para el log
      */
@@ -34,7 +24,7 @@ var audioList = (function() {
      */
     var index = 0,
     	pagina=1,
-        audioList = [],
+        userList = [],
         _callback;
 
     /*
@@ -45,25 +35,31 @@ var audioList = (function() {
     function _init(callback){
 		
         _callback=callback;
-        _fetchAudioList();
+        _fetchUserList();
     };
 
     /*
      * Funcion privada que obtiene el audioList    
      */
 
-    function _fetchAudioList() {
+    function _fetchUserList() {
         try {
             var xhrObj = new XMLHttpRequest();
             xhrObj.onreadystatechange =  function _xhrReadyStateChange() {
+        		alert("xhrObj.status"+xhrObj.status);
             	try {
+            		alert("entra en el try"+xhrObj.readyState+"---"+xhrObj.status);
             		//No usamos switch porque hay que tratar codigo y estado
+            		
             		if (STATE_FINISH === xhrObj.readyState && STATUS_OK === xhrObj.status) {
-            			audioList = JSON.parse(xhrObj.responseText).page.items;
-            			_callback(audioList);
+            			//alert("userList:"+xhrObj.responseText);
+            			userList = JSON.parse(xhrObj.responseText).xml.plan;
+            			//alert("userList:"+userList);
+            			_callback(userList);
             		}
+            		alert("_fetchUserList");
             	} catch (e) {
-            		alert("error tratando estados objeto xhr")
+            		alert("error tratando estados objeto xhr");
             	}
 
             }
@@ -80,10 +76,10 @@ var audioList = (function() {
      *   objJS.title objJS.link objJS.description
      */
 
-    function _getAudio(index) {
+    function _getUser(index) {
         var retorno=null,
 		
-            aux = audioList[index];
+            aux = userList[index];
         if (aux) {
             retorno = aux;
         } else {
@@ -97,9 +93,9 @@ var audioList = (function() {
      * @return url Audio actual o null
      */
 
-    function _getActualAudioURL() {
+    function _getActualUserURL() {
         var retorno = null,
-            aux = _getAudio(index);        
+            aux = _getUser(index);        
        
         if (aux) {
             retorno = aux.link;
@@ -112,9 +108,9 @@ var audioList = (function() {
      * @return url Audio indicado o null
      */
 
-    function _getAudioURL(indice) {
+    function _getUserURL(indice) {
         var retorno = null,
-            aux = _getAudio(indice);        
+            aux = _getUser(indice);        
        
         if (aux) {
             retorno = aux.link;
@@ -127,9 +123,9 @@ var audioList = (function() {
      * Funcion privada incrementa el numero de Audio
      */
 
-    function _nextAudio() {
-        log.d("nextAudio","valor de index/length "+index+"/"+audioList.length);
-        if (index < audioList.length-1) {
+    function _nextUser() {
+        log.d("nextUser","valor de index/length "+index+"/"+userList.length);
+        if (index < userList.length-1) {
             index++;
         } else {
             index = 0;
@@ -141,8 +137,8 @@ var audioList = (function() {
      * Funcion privada incrementa el numero de Audio
      */
 
-    function _getAudioCount() {
-        return audioList.length; 
+    function _getUserCount() {
+        return userList.length; 
     }    
 
     // Parte publica
@@ -150,20 +146,20 @@ var audioList = (function() {
         init: function(callback) {
             _init(callback);
         },
-        getAudioCount: function() {
-            return audioList.length;
+        getUserCount: function() {
+            return userList.length;
         },
-        getAudio: function(index) {
-            return _getAudio(index);
+        getUser: function(index) {
+            return _getUser(index);
         },
-        getActualAudioURL: function() {
-            return _getActualAudioURL();
+        getActualUserURL: function() {
+            return _getActualUserURL();
         },
-        nextAudio: function() {
-            return _nextAudio();
+        nextUser: function() {
+            return _nextUser();
         },
-        getAudioURL: function() {
-            return _getAudioURL();
+        getUserURL: function() {
+            return _getUserURL();
         }		
 		
     }

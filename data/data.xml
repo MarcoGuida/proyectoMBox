@@ -1,0 +1,49 @@
+<xml>
+
+<user>
+	<nombre>Fulanito</nombre>
+	<icono>enlaceIcono</icono>
+</user>
+
+<plan>
+	<lun>
+		<tarea>
+			<hora>0800</hora>
+			<imagen>urlimagen</imagen>
+			<titulo>Un titulo</titulo>
+			<texto>Una tarea del lunes</texto>
+		</tarea>
+		
+		<tarea>
+			<hora>0800</hora>
+			<imagen>urlimagen</imagen>
+			<titulo>Un titulo</titulo>
+			<texto>Una tarea del lunes</texto>
+		</tarea>
+		
+	</lun>
+	
+	<mar>
+		
+	</mar>
+	
+	<mie>
+		
+	</mie>
+	
+	<jue>
+		
+	</jue>
+	
+	<vie>
+		
+	</vie>
+	
+	<sab>
+	</sab>
+	
+	<dom>
+	</dom>
+</plan>
+
+</xml>
