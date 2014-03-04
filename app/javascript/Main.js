@@ -17,21 +17,47 @@ var Main = (function() {
 
 	function _paintData(jsonDataRecv)
 	{
-		//alert("_paintData");
+		alert("dentro de print data");
+		//alert("PrintData prueba JSON "+jsonDataRecv);
+		//alert(importedJSON.USUARIO+" -+- "+importedJSON.enlaceIconUser);
+		//alert("PruebaArray: "+pruebaArray);
+		//alert(importedJSON.parseaJSON());
+		//alert(importedJSON.parseaJSON(jsonDataRecv));
+		
+		var tareasSemana= [];
+		
+		var jsonArray=importedJSON.parseaJSON(jsonDataRecv);
+		
+		for ( var i = 2; i < jsonArray.length; i++) {
+		tareasSemana.push(jsonArray[i]);
+		//alert(jsonArray[i].tarea.hora);	
+		}
+		
+		var fechaActual=new Date();
+		var diaSemana=fechaActual.getDay()-1;
+		
+//		for ( var i = 0; i < tareasSemana.length; i++) {
+//			//alert("i="+i+" "+tareasSemana[i].tarea);
+//
+//			
+//		}
+		alert("usuario:"+jsonArray[0]);
+		alert("hoy es: "+diaSemana);
+		alert("Numero tareas de hoy:");
+		alert((tareasSemana[diaSemana].tarea).length);
 		
 		var title= document.createElement("div"); 
 		var image= document.createElement("div"); 
 		var description= document.createElement("div"); 
 		
-		title.innerHTML = "<div id=\"title\">"+jsonDataRecv.lun.tarea[0].title+"</div>";
-		image.innerHTML = "<div id=\"image\">"+jsonDataRecv.lun.tarea[0].image+"</div>";
-		description.innerHTML = "<div id=\"description\">"+jsonDataRecv.lun.tarea[0].description+"</div>";
+		title.innerHTML = "<div id=\"title\">"+jsonDataRecv.plan.lun.tarea[0].title+"</div>";
+		image.innerHTML = "<div id=\"image\">"+jsonDataRecv.plan.lun.tarea[0].image+"</div>";
+		description.innerHTML = "<div id=\"description\">"+jsonDataRecv.plan.lun.tarea[0].description+"</div>";
 
 		document.getElementById("info").appendChild(title);
 		document.getElementById("info").appendChild(image);
 		document.getElementById("info").appendChild(description);
 		
-//		}
 	};
 	
 	function _onUnload() {
@@ -122,8 +148,10 @@ var Main = (function() {
 				break;
 			case tvKey.KEY_BLUE:
 				alert("BLUE");
+				//importedJSON.prueba();
+				//importedJSON.parseaJSON("jsonImportadoooooooooooo");
 				resetButtons();
-				document.getElementById("blueButton").style.border = "8px solid pink";
+				//document.getElementById("blueButton").style.border = "8px solid pink";
 				//widgetAPI.putInnerHTML(info, "Has pulsado AZUL");
 				break;
 

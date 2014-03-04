@@ -9,9 +9,9 @@
         "tarea": [
           {
             "hora": "0800",
-            "image": "------------urlimagen",
-            "title": "------------Un titulo",
-            "description": "------------Una tarea del lunes"
+            "image": "------------papapaaaa",
+            "title": "------------Un titititulo",
+            "description": "------------Una tarea del lululunes"
           },
           {
             "hora": "0800",
@@ -21,7 +21,22 @@
           }
         ]
       },
-      "mar": " ",
+      "mar": {
+        "tarea": [
+          {
+            "hora": "0800",
+            "image": "------------papapaaaa",
+            "title": "------------Un titititulo",
+            "description": "------------Una tarea del lululunes"
+          },
+          {
+            "hora": "0800",
+            "image": "urlimagen",
+            "title": "Un titulo",
+            "description": "Una tarea del lunes"
+          }
+        ]
+      },
       "mie": " ",
       "jue": " ",
       "vie": " ",
