@@ -8,66 +8,92 @@
 body {
 	width: 1280px;
 	height: 720px;
-	background-color: white;
-	font-size: 21px;
+	background-color: #6DACEA;
+	font-size: 24px;
 }
 
 #header {
 	width: 1280px;
 	height: 80px;
+	background-color: #6DACEA;
+    background-image: linear-gradient(#8ED0FA, #4E95DC);
+    /*border: 1px solid #3178C0;*/
+    color: #0C4FA3;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.2);
 	
 }
 
+#nav {
+	background: url("../../Imagenes/shadow.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+	float:right;
+	height: 80px;
+	margin-right: 50px;
+}
+
+#nav ul {
+list-style-type: none;
+margin: 0px;
+padding: 0px;
+/*border-left-width: 1px;
+border-left-style: solid;
+border-left-color: #3178C0;*/
+}
+
+#nav ul li, #hours ul li {
+    
+    display: inline;
+    text-align: center;
+	padding: 14px 16px 9px 15px;
+	/*border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #3178C0;
+	font-weight: bold;*/
+}
+
 #content {
-	width: 1280px;
-	height: 490px;
+	width: 1180px;
+	height: 470px;
+	border: 10px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin: 0px auto;
+    position: relative;
+   
 }
 
 #info {
-	width: 1280px;
+	width: 1180px;
 	height: 400px;
+	
+	
 
 }
 
 #hours {
-	background-color: blue;
-	width: 1280px;
+	background-color: 56D0F0;
+	width: 1180px;
 	height: 90px;
+	float: left;
+	display: block;
 
 }
 
-#greenButton {
-	background-color: green;
-	width: 100px;
-	height: 50px;
-	float: left;
-}
-
-#blueButton {
-	background-color: blue;
-	width: 100px;
-	height: 50px;
-	float: left;}
-
-#yellowButton {
-	background-color: yellow;
-	width: 100px;
-	height: 50px;
-	float: left;
-}
-
-#info {
-	width: 640px;
-	height: 595px;
-	float: left;
+.mañana {
+	background: url("../../Imagenes/Mag1cwind0w-O-Sunny-Day-Osd-sun.ico") no-repeat scroll center top;
+	
 }
 
 #advertisement {
 	width: 1280px;
 	height: 115px;
+	bottom:45px;
+	position: absolute;
+	background-color: #000;
 }
 
 #footer {
+	bottom:0;
+	position: absolute;
 	width: 1280px;
 	height: 45px;
+	background-color: #2C3E50;
 }
