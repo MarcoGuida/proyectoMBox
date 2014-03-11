@@ -83,11 +83,12 @@ border-left-color: #3178C0;*/
 }
 
 #perfil{
-	background: url("../../Imagenes/shadow.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+	background: url("../../Imagenes/perfil.png") no-repeat scroll center top rgba(0, 0, 0, 0);
 	display:block;
 	float:right;
 	height: 80px;
-	with: 80px;	
+	width: 80px;	
+	margin-right: 40px;
 }
 
 #content {
@@ -103,8 +104,35 @@ border-left-color: #3178C0;*/
 #info {
 	width: 1180px;
 	height: 400px;
-	
-	
+
+}
+
+#tituloActividad {
+	width: 590px;
+	height: 50px;	
+	float: left;
+
+}
+
+#iconoActividad {
+	width: 590px;
+	height: 260px;	
+	float: left;
+	clear: both;
+
+}
+
+#descripcionActividad {
+	width: 590px;
+	height: 200px;	
+	float: right;
+
+}
+
+#horaActividad {
+	width: 590px;
+	height: 110px;	
+	float: right;
 
 }
 
