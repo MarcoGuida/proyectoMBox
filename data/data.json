@@ -8,7 +8,7 @@
       "lun": {
         "tarea": [
           {
-            "hora": "01:01",
+            "hora": "01:04",
             "duracion": "10",
             "image": "img de 0101",
             "title": "titulo de 0101",
@@ -26,7 +26,7 @@
       "mar": {
         "tarea": [
           {
-            "hora": "01:01",
+            "hora": "01:03",
 			"duracion": "10",
             "image": "http://es.fordesigner.com/imguploads/Image/cjbc/zcool/png20080526/1211809482.png",
             "title": "titulo de 0101",
@@ -41,6 +41,13 @@
           },
           {
             "hora": "03:03",
+            "duracion": "10",
+            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
+            "title": "Titulo de 0303",
+            "description": "Descripcion de 0303"
+          },
+          {
+            "hora": "19:30",
             "duracion": "10",
             "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
             "title": "Titulo de 0303",

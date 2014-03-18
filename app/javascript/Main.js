@@ -2,89 +2,142 @@ var Main = (function() {
 	var widgetAPI = new Common.API.Widget();
 	var tvKey = new Common.API.TVKeyValue();
 	var numEnlaces = 0;
+	var capaBarraHours;
 	// var enlaceMarcado=0;
-
+	var fechaActual;
+	var diaSemana;
+	var tareasSemana = [];
+	var tareasDeHoy=[];
+	
 	function _onLoad() {
 		try {
+			fechaActual = new Date();
+			diaSemana = fechaActual.getDay() - 1;
 			_enableKeys();
 			widgetAPI.sendReadyEvent();
-			userList.init(Main.paintData);
+			
 
 			// importedJSON.prueba();
 			// alert(importedJSON.miVariable);
+			_pantallaDia();
 
-			alert("fin onLoad");
+			// alert(horaActual);
+			//alert("fin onLoad");
 		} catch (e) {
 			alert(e);
 		}
 	}
 	;
+	
+	
+	function _pantallaDia() {
+		alert("pantallaDia");
+		userList.init(Main.paintTareas);
+	}
 
-	function _paintData(jsonDataRecv) {
+	function _pintaBarraHours() {
+		alert("_pintaBarraHours"+tareasDeHoy.length);
+	
+		
+		capaBarraHours = document.getElementById("hours");
+		var escalaHoras = fechaActual.getHours();
+		var ulBarraHours = "<ul>"
+				+ "<li id=\"leftArrow\" class=\"arrows\"><img src=\"\" alt=\"leftArrow\"/></li>"
+				+ "<li><a href=\"#\">Ahora<i class=\"mañana\"></i></a></li>";
+
+		for ( var i = 1; i < 5; i++) {
+			ulBarraHours += "<li><a href=\"#\">" + escalaHoras++
+					+ ":00</a></li>";
+		}
+		ulBarraHours += "<li id=\"rightArrow\" class=\"arrows\"><img src=\"images/movie_btn_icon_stop_n.png\" alt=\"rightArrow\"/></li>"
+				+ "</ul>";
+
+		capaBarraHours.innerHTML = ulBarraHours;
+	}
+
+	function _paintTareas(jsonDataRecv) {
 		alert("dentro de print data");
-		var tareasSemana = [];
+		
 		var jsonArray = importedJSON.parseaJSON(jsonDataRecv);
 		// alert(jsonArray);
 		for ( var i = 2; i < jsonArray.length; i++) {
 			tareasSemana.push(jsonArray[i]);
 		}
 
-		var fechaActual = new Date();
-		var diaSemana = fechaActual.getDay() - 1;
+//		for ( var i = 0; i < tareasSemana.length; i++) {
+//			alert("i=" + i + " " + tareasSemana[i].tarea);
+//
+//		}
+		//alert("usuario:" + jsonArray[0]);
+		//alert("hoy es: " + diaSemana);
+		//alert("Numero tareas de hoy:");
+		//alert((tareasSemana[diaSemana].tarea).length);
 
-		for ( var i = 0; i < tareasSemana.length; i++) {
-			 alert("i="+i+" "+tareasSemana[i].tarea);
+		var nombreUsu = jsonArray[0];
+		document.getElementById("perfil").innerHTML = nombreUsu;
 
+		var iconoUsu = jsonArray[1];
+		var unaIMG = document.createElement("img");
+		unaIMG.setAttribute('src', iconoUsu);
+		unaIMG.setAttribute('alt', 'na');
+		unaIMG.setAttribute('height', '100px');
+		unaIMG.setAttribute('width', '100px');
+		document.getElementById("perfil").appendChild(unaIMG);
+
+		alert("JSL"+jsonArray.length);
+		tareasSemana=[];
+		for ( var i = 2; i < jsonArray.length; i++) {
+			alert("i="+i);
+			tareasSemana.push(jsonArray[i]);
+			alert(tareasSemana.length);
+			 //alert(jsonArray[i].tarea);
 		}
-		 alert("usuario:"+jsonArray[0]);
-		 alert("hoy es: "+diaSemana);
-		 alert("Numero tareas de hoy:");
-		 alert((tareasSemana[diaSemana].tarea).length);
-	
-		 var nombreUsu=jsonArray[0];
-		 document.getElementById("perfil").innerHTML=nombreUsu;
 
-		 var iconoUsu=jsonArray[1];
-		 var unaIMG=document.createElement("img");
-		 unaIMG.setAttribute('src', iconoUsu);
-		 unaIMG.setAttribute('alt', 'na');
-		 unaIMG.setAttribute('height', '100px');
-		 unaIMG.setAttribute('width', '100px');
-		 document.getElementById("perfil").appendChild(unaIMG);
-
-		 for ( var i = 2; i < jsonArray.length; i++) {
-		 tareasSemana.push(jsonArray[i]);
-		 //alert(jsonArray[i].tarea.hora);
-		 }
-				
-		 var tareasDeHoy=tareasSemana[diaSemana].tarea;
-		 //alert("tareasDeHoy :"+tareasDeHoy.length);
-		// document.getElementById("numTareas").innerHTML="Numero Tareas de hoy:"+tareasDeHoy.length;
-
-		 alert("EMPIEZA EL FOR TAREAS");
-		 for ( var i = 0; i < tareasDeHoy.length; i++) {
-		 var imagenTarea=document.createElement("img");
-		 alert(tareasDeHoy[i].image);
-		 imagenTarea.setAttribute('src', tareasDeHoy[i].image );
-		 imagenTarea.setAttribute('alt', 'na');
-		 imagenTarea.setAttribute('height', '50px');
-		 imagenTarea.setAttribute('width', '50px');
+		//alert(diaSemana);
+		alert("ts"+tareasSemana.length);
 		
-		 var tarea= document.createElement("div");
-		 var description= document.createElement("div");
-					
-		 //alert("tareasDeHoy[i] : "+tareasDeHoy[i].hora);
-					
-		 tarea.innerHTML = "<div id=\"tarea"+i+"\">"+tareasDeHoy[i].hora+" - "+tareasDeHoy[i].title+"</div>";
-		 description.innerHTML = "<div>"+tareasDeHoy[i].description+"</div>";
-					
-					
-		 document.getElementById("info").appendChild(tarea);
-		 document.getElementById("info").appendChild(description);
-		 document.getElementById("tarea"+i).appendChild(imagenTarea);
-		 }
-		 alert("TERMINA EL FOR TAREAS");
+		//tareasDeHoy.push(tareasSemana[diaSemana]);
+		alert("hoy"+diaSemana);
+		alert("tareasSemana[hoy]"+tareasSemana[diaSemana].tarea[0].hora);
+		alert( (tareasSemana[diaSemana].tarea).length);
+		for ( var i = 0; i <(tareasSemana[diaSemana].tarea).length; i++) {
+			
+			alert(tareasSemana[diaSemana].tarea[i].hora);
+			tareasDeHoy.push(tareasSemana[diaSemana].tarea[i]);
+		}
+		
+		
+		
+		alert("tareasDeHoy :"+tareasDeHoy.length);
+		// document.getElementById("numTareas").innerHTML="Numero Tareas de
+		// hoy:"+tareasDeHoy.length;
 
+	//	alert("EMPIEZA EL FOR TAREAS");
+		for ( var i = 0; i < tareasDeHoy.length; i++) {
+			var imagenTarea = document.createElement("img");
+			//alert(tareasDeHoy[i].image);
+			imagenTarea.setAttribute('src', tareasDeHoy[i].image);
+			imagenTarea.setAttribute('alt', 'na');
+			imagenTarea.setAttribute('height', '50px');
+			imagenTarea.setAttribute('width', '50px');
+
+			var tarea = document.createElement("div");
+			var description = document.createElement("div");
+
+			// alert("tareasDeHoy[i] : "+tareasDeHoy[i].hora);
+
+			tarea.innerHTML = "<div id=\"tarea" + i + "\">"
+					+ tareasDeHoy[i].hora + " - " + tareasDeHoy[i].title
+					+ "</div>";
+			description.innerHTML = "<div>" + tareasDeHoy[i].description
+					+ "</div>";
+
+			document.getElementById("info").appendChild(tarea);
+			document.getElementById("info").appendChild(description);
+			document.getElementById("tarea" + i).appendChild(imagenTarea);
+		}
+	//	alert("TERMINA EL FOR TAREAS");
+		_pintaBarraHours();
 	}
 	;
 
@@ -254,8 +307,8 @@ var Main = (function() {
 		keyDown : function() {
 			_keyDown();
 		},
-		paintData : function(jsonDataRecv) {
-			_paintData(jsonDataRecv);
+		paintTareas : function(jsonDataRecv) {
+			_paintTareas(jsonDataRecv);
 		}
 	};
 })();
