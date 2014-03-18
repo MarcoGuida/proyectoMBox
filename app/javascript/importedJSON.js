@@ -1,14 +1,23 @@
 var importedJSON = (function() {
 
+
 	function _init() {
 		
 		
+
+	var _miVariable;
+	
+	function _init() {
+
 
 	};
 	
 
 function _prueba() {
 	alert("prueba imported JSON");
+
+	_miVariable=10;
+	alert("Ahora mi variable vale: "+_miVariable);
 	return 0;
 }
 	
@@ -57,6 +66,8 @@ function _parseaJSON(jsonImportado) {
 
 	// metodos publicos
 return {
+
+	miVariable : _miVariable,
 	
 	init : function() {
 		return _init();
@@ -68,4 +79,4 @@ return {
 		return	_parseaJSON(jsonImportado);
 	}
 };
-})();
+}})();
