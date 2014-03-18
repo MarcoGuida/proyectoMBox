@@ -8,66 +8,183 @@
 body {
 	width: 1280px;
 	height: 720px;
-	background-color: white;
-	font-size: 21px;
+	background-color: #ECF0F1;
+	font-size: 24px;
 }
 
 #header {
 	width: 1280px;
 	height: 80px;
+	/*background-color: #6DACEA;
+    background-image: linear-gradient(#8ED0FA, #4E95DC);
+    border: 1px solid #3178C0;
+    color: #0C4FA3;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.2);*/
 	
 }
 
+#nav {
+	float:right;
+	height: 80px;
+	margin: 10px 50px 0 0;
+}
+
+#nav ul {
+list-style-type: none;
+/*margin: 0px;
+padding: 0px;
+border-left-width: 1px;
+border-left-style: solid;
+border-left-color: #3178C0;*/
+}
+
+#nav ul li, #hours ul li {
+    
+    display: inline;
+    text-align: center;
+	/*padding: 14px 16px 9px 15px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #3178C0;
+	font-weight: bold;*/
+}
+
+.boton {
+    position: relative;
+	padding: 10px 40px;
+  	margin: 0px 10px 10px 0px;
+  	float: left;
+	border-radius: 10px;
+	font-family: 'Pacifico', cursive;
+	font-size: 25px;
+	color: #FFF;
+	text-decoration: none;
+	position: relative;
+	background-color: #3498DB;
+	border-bottom: 5px solid #2980B9;
+	text-shadow: 0px -2px #2980B9;
+}
+
+.boton:hover {
+	background-color: #FBB160;
+	border-bottom: 5px solid #FFA544;
+	text-shadow: 0px -2px #FFA544;
+}
+
+.boton:ACTIVE {
+    top: 5px;
+    border-bottom: 0px solid;
+}
+
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+#perfil{
+	background: url("../../Imagenes/perfil.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+	display:block;
+	float:right;
+	height: 80px;
+	width: 80px;	
+	margin-right: 40px;
+}
+
 #content {
-	width: 1280px;
-	height: 490px;
+	width: 1180px;
+	height: 470px;
+	border: 10px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin: 0px auto;
+    position: relative;
+   
 }
 
 #info {
-	width: 1280px;
+	width: 1180px;
 	height: 400px;
 
 }
 
+#tituloActividad {
+	width: 590px;
+	height: 50px;	
+	float: left;
+
+}
+
+#iconoActividad {
+	width: 590px;
+	height: 260px;	
+	float: left;
+	clear: both;
+
+}
+
+#descripcionActividad {
+	width: 590px;
+	height: 200px;	
+	float: right;
+
+}
+
+#horaActividad {
+	width: 590px;
+	height: 110px;	
+	float: right;
+
+}
+
 #hours {
-	background-color: blue;
-	width: 1280px;
+	background-color: 56D0F0;
+	width: 1180px;
 	height: 90px;
+	float: left;
+	display: block;
 
 }
 
-#greenButton {
-	background-color: green;
-	width: 100px;
-	height: 50px;
+#hours li{
+	background-color: #FFF;
+	width: 180px;
+	height: 90px;
 	float: left;
+	margin:1px;
+
 }
 
-#blueButton {
-	background-color: blue;
-	width: 100px;
-	height: 50px;
-	float: left;}
-
-#yellowButton {
-	background-color: yellow;
-	width: 100px;
-	height: 50px;
-	float: left;
+#hours li a{
+	box-shadow: 1px 1px 2px #DDDDDD;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
-#info {
-	width: 640px;
-	height: 595px;
+#hours .arrows {
+	background-color: #FFF;
+	width: 40px;
+	height: 90px;
 	float: left;
+	margin:1px;
+	
 }
 
 #advertisement {
 	width: 1280px;
 	height: 115px;
+	bottom:45px;
+	position: absolute;
+	background-color: #000;
 }
 
 #footer {
+	bottom:0;
+	position: absolute;
 	width: 1280px;
 	height: 45px;
+	background-color: #2C3E50;
 }

@@ -11,6 +11,7 @@
 		<!-- TODO : Javascript code -->
 		<script language="javascript" type="text/javascript" src="app/javascript/Main.js"></script>
 		<script language="javascript" type="text/javascript" src="app/javascript/userList.js"></script>
+		<script language="javascript" type="text/javascript" src="app/javascript/importedJSON.js"></script>
 
 		<!-- TODO : Style sheets code -->
 		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
@@ -27,40 +28,47 @@
 		<!-- TODO: your code here -->
 		
 		<div id="header">
+			
 			<div id="perfil"></div>
+			
 			<div id="nav">
 				<ul>
-					<li>Ahora</li>
-					<li>Semana</li>
-					<li>Calendario</li>
-					<li>Alertas</li>
-					<li>Configuración</li>
-					<li>Salir</li>
+					<li class="boton animate">Día</li>
+					<li class="boton animate">Semana</li>
+					<li class="boton animate">Alertas</li>
+					<li class="boton animate">Configuración</li>
+					<li class="boton animate">Salir</li>
 				</ul> 
 			</div>
+			
+			
 			
 		</div>
 		
 		<div id="content">
 		
 			<div id="info">
-			
-				</div>
-			
+				<div id="tituloActividad"></div>
+				<div id="iconoActividad"></div>
+				<div id="descripcionActividad"></div>
+				<div id="horaActividad"></div>			
 			</div>
-			
+				
 			<div id="hours">
 				<ul>
-					<li>Ahora</li>
-					<li>08:00</li>
-					<li>09:00</li>
-					<li>10:00</li>
-					<li>11:00</li>
-					<li>12:00</li>
+					<li id="leftArrow" class="arrows"><img src="" alt="leftArrow"/></li>
+					<li><a href="#">Ahora<i class="mañana"></i></a></li>
+					<li><a href="#">08:00</a></li>
+					<li><a href="#">09:00</a></li>
+					<li><a href="#">10:00</a></li>
+					<li><a href="#">11:00</a></li>
+					<li><a href="#">12:00</a></li>
+					<li id="rightArrow" class="arrows"><img src="images/movie_btn_icon_stop_n.png" alt="rightArrow"/></li>
 				</ul> 
 			</div>
-		
+			
 		</div>
+			
 		
 		<div id="advertisement"></div>
 		<div id="footer"></div>

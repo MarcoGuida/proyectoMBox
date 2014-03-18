@@ -3,10 +3,10 @@
 	<cpname itemtype="string"></cpname>
 	<cplogo itemtype="string"></cplogo>
 	<cpauthjs itemtype="string"></cpauthjs>
-	<ThumbIcon itemtype="string">icon/sampleIcon_106_87.png</ThumbIcon>
-	<BigThumbIcon itemtype="string">icon/sampleIcon_115_95.png</BigThumbIcon>
-	<ListIcon itemtype="string">icon/sampleIcon_85_70.png</ListIcon>
-	<BigListIcon itemtype="string">icon/sampleIcon_95_78.png</BigListIcon>
+	<ThumbIcon itemtype="string">./resource/icon/widget_70.png</ThumbIcon> 
+	<BigThumbIcon itemtype="string">./resource/icon/widget_115.png</BigThumbIcon> 
+	<ListIcon itemtype="string">./resource/icon/widget_85.png</ListIcon> 
+	<BigListIcon itemtype="string">./resource/icon/widget_95.png</BigListIcon> 
 	<category itemtype="string"></category>
 	<autoUpdate itemtype="boolean">n</autoUpdate>
 	<ver itemtype="string">0.100</ver>
@@ -20,8 +20,8 @@
 	<dcont itemtype="boolean">y</dcont>
 	<widgetname itemtype="string">240214</widgetname>
 	<description itemtype="string"></description>
-	<width itemtype="string">960</width>
-	<height itemtype="string">540</height>
+	<width itemtype="string">1280</width>
+	<height itemtype="string">720</height>
 	<author itemtype="group"> 
 		<name itemtype="string"></name>
 		<email itemtype="string"></email>

@@ -46,18 +46,19 @@ var userList = (function() {
         try {
             var xhrObj = new XMLHttpRequest();
             xhrObj.onreadystatechange =  function _xhrReadyStateChange() {
-        		alert("xhrObj.status"+xhrObj.status);
+        		//alert("xhrObj.status"+xhrObj.status);
             	try {
-            		alert("entra en el try"+xhrObj.readyState+"---"+xhrObj.status);
+            		//alert("entra en el try"+xhrObj.readyState+"---"+xhrObj.status);
             		//No usamos switch porque hay que tratar codigo y estado
             		
             		if (STATE_FINISH === xhrObj.readyState && STATUS_OK === xhrObj.status) {
             			//alert("userList:"+xhrObj.responseText);
-            			userList = JSON.parse(xhrObj.responseText).xml.plan;
-            			//alert("userList:"+userList);
+            			userList = JSON.parse(xhrObj.responseText).xml;
+            		//	alert("userList:"+userList);
+            		//	alert("_fetchUserList");
             			_callback(userList);
             		}
-            		alert("_fetchUserList");
+            		
             	} catch (e) {
             		alert("error tratando estados objeto xhr");
             	}
