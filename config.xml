@@ -20,8 +20,8 @@
 	<dcont itemtype="boolean">y</dcont>
 	<widgetname itemtype="string">240214</widgetname>
 	<description itemtype="string"></description>
-	<width itemtype="string">960</width>
-	<height itemtype="string">540</height>
+	<width itemtype="string">1280</width>
+	<height itemtype="string">720</height>
 	<author itemtype="group"> 
 		<name itemtype="string"></name>
 		<email itemtype="string"></email>
