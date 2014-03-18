@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Ejercicio1</title>
+
+		<!-- TODO : Common API -->
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+		<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+
+		<!-- TODO : Javascript code -->
+		<script language="javascript" type="text/javascript" src="app/javascript/Main.js"></script>
+		<script language="javascript" type="text/javascript" src="app/javascript/userList.js"></script>
+		<script language="javascript" type="text/javascript" src="app/javascript/importedJSON.js"></script>
+
+		<!-- TODO : Style sheets code -->
+		<link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+
+		<!-- TODO: Plugins -->
+
+	</head>
+
+	<body onload="Main.onLoad();" onunload="Main.onUnload();" >
+
+		<!-- Dummy anchor as focus for key events -->
+		<a href="javascript:void(0);" id="anchor" onkeydown="Main.keyDown();"></a>
+
+		<!-- TODO: your code here -->
+		
+		<div id="header">
+			
+			<div id="perfil"></div>
+			
+			<div id="nav">
+				<ul>
+					<li class="boton animate">Día</li>
+					<li class="boton animate">Semana</li>
+					<li class="boton animate">Alertas</li>
+					<li class="boton animate">Configuración</li>
+					<li class="boton animate">Salir</li>
+				</ul> 
+			</div>
+			
+			
+			
+		</div>
+		
+		<div id="content">
+		
+			<div id="info">
+				<div id="tituloActividad"></div>
+				<div id="iconoActividad"></div>
+				<div id="descripcionActividad"></div>
+				<div id="horaActividad"></div>			
+			</div>
+				
+			<div id="hours">
+				<ul>
+					<!--<li id="leftArrow" class="arrows"><a href="#"><img src="" alt="leftArrow"/></a></li>-->
+					<li><a href="#">Ahora<span class="hour-icon hour-icon-mañana" data-type="icon" style="display: block; top: 30px; background-position: left top;"></span></a></li>
+					<li><a href="#">08:00<span class="hour-icon hour-icon-mañana" data-type="icon" style="display: block; top: 30px; background-position: left top;"></span></a></li>
+					<li><a href="#">09:00<span class="hour-icon hour-icon-mañana" data-type="icon" style="display: block; top: 30px; background-position: left top;"></span></a></li>
+					<li><a href="#">10:00<span class="hour-icon hour-icon-mañana" data-type="icon" style="display: block; top: 30px; background-position: left top;"></span></a></li>
+					<li><a href="#">11:00<span class="hour-icon hour-icon-mañana" data-type="icon" style="display: block; top: 30px; background-position: left top;"></span></a></li>
+					<li><a href="#">12:00<span class="hour-icon hour-icon-mañana" data-type="icon" style="display: block; top: 30px; background-position: left top;"></span></a></li>
+					<!--<li id="rightArrow" class="arrows"><a href="#"><img src="" alt="rightArrow"/></a></li>-->
+				</ul>
+				<a class="hour_next" href="#"></a>
+				<a class="hour_prev" href="#"></a> 
+			</div>
+			
+		</div>
+			
+		
+		<div id="advertisement"></div>
+		<div id="footer"></div>
+
+		<object id="pluginNnavi" classid="clsid:SAMSUNG-INFOLINK-NNAVI"></object>
+		<object id="pluginAudio" classid="clsid:SAMSUNG-INFOLINK-AUDIO"></object>
+	</body>
+</html>
