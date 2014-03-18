@@ -2,38 +2,49 @@
   "xml": {
     "user": {
       "nombre": "Fulanito",
-      "icono": "enlaceIcono"
+      "icono": "http://rlv.zcache.es/pequeno_icono_del_ciclomotor_pegatina-r5c3585660891443c983ac62adf063005_v9waf_8byvr_512.jpg"
     },
     "plan": {
       "lun": {
         "tarea": [
           {
-            "hora": "0800",
-            "image": "------------papapaaaa",
-            "title": "------------Un titititulo",
-            "description": "------------Una tarea del lululunes"
+            "hora": "01:01",
+            "duracion": "10",
+            "image": "img de 0101",
+            "title": "titulo de 0101",
+            "description": "Descripcion de 0101"
           },
           {
-            "hora": "0800",
-            "image": "urlimagen",
-            "title": "Un titulo",
-            "description": "Una tarea del lunes"
+            "hora": "02:02",
+            "duracion": "10",
+            "image": "img de 0202",
+            "title": "Titulo de 0202",
+            "description": "Descripcion de 0202"
           }
         ]
       },
       "mar": {
         "tarea": [
           {
-            "hora": "0800",
-            "image": "------------papapaaaa",
-            "title": "------------Un titititulo",
-            "description": "------------Una tarea del lululunes"
+            "hora": "01:01",
+			"duracion": "10",
+            "image": "http://es.fordesigner.com/imguploads/Image/cjbc/zcool/png20080526/1211809482.png",
+            "title": "titulo de 0101",
+            "description": "Descripcion de 0101"
           },
           {
-            "hora": "0800",
-            "image": "urlimagen",
-            "title": "Un titulo",
-            "description": "Una tarea del lunes"
+            "hora": "02:02",
+			"duracion": "10",
+            "image": "http://images.all-free-download.com/images/graphiclarge/server_small_case_icon_blue_clip_art_7457.jpg",
+            "title": "Titulo de 0202",
+            "description": "Descripcion de 0202"
+          },
+          {
+            "hora": "03:03",
+            "duracion": "10",
+            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
+            "title": "Titulo de 0303",
+            "description": "Descripcion de 0303"
           }
         ]
       },

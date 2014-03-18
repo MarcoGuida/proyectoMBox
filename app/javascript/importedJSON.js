@@ -1,11 +1,6 @@
 var importedJSON = (function() {
-
-
-	function _init() {
-		
-		
-
-	var _miVariable;
+	
+	var _miVariable=0;
 	
 	function _init() {
 
@@ -23,21 +18,15 @@ function _prueba() {
 	
 	
 function _parseaJSON(jsonImportado) {
+	alert("parseaJSON");
+	//alert(jsonImportado.user.nombre);
 	var arrayJSON= [];
-	alert(jsonImportado.plan.lun);
-	
-	
-	
 	
 	//var usuario=jsonImportado.user.nombre;
 	//var enlaceIconUser=jsonImportado.user.icono;
 	//alert(usuario+" - "+enlaceIconUser);
 	//alert("usu y contras impostados "+usuario);
-//	arrayJSON.push("1");
-//	arrayJSON.push("2");
-//	arrayJSON.push("3");
-	
-	
+
 	arrayJSON.push(jsonImportado.user.nombre);
 	arrayJSON.push(jsonImportado.user.icono);
 	
@@ -72,11 +61,11 @@ return {
 	init : function() {
 		return _init();
 	},	
-	prueba: function() {
+	prueba : function() {
 		return	_prueba();
 	},
-	parseaJSON: function(jsonImportado) {
+	parseaJSON : function(jsonImportado) {
 		return	_parseaJSON(jsonImportado);
 	}
 };
-}})();
+})();

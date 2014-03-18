@@ -52,7 +52,7 @@ var userList = (function() {
             		//No usamos switch porque hay que tratar codigo y estado
             		
             		if (STATE_FINISH === xhrObj.readyState && STATUS_OK === xhrObj.status) {
-            		//	alert("userList:"+xhrObj.responseText);
+            			//alert("userList:"+xhrObj.responseText);
             			userList = JSON.parse(xhrObj.responseText).xml;
             		//	alert("userList:"+userList);
             		//	alert("_fetchUserList");
