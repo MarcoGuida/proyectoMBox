@@ -38,7 +38,7 @@ border-left-style: solid;
 border-left-color: #3178C0;*/
 }
 
-#nav ul li, #hours ul li {
+#nav ul li, #hours ul li, #week ul li {
     
     display: inline;
     text-align: center;
@@ -153,7 +153,7 @@ border-left-color: #3178C0;*/
 
 }
 
-#hours {
+#hours, #week {
 	background-color: 56D0F0;
 	width: 1180px;
 	height: 90px;
@@ -162,7 +162,7 @@ border-left-color: #3178C0;*/
 
 }
 
-#hours li{
+#hours li, #week li{
 	background-color: #3498DB;
 	width: 154px;
 	height: 90px;
@@ -171,20 +171,21 @@ border-left-color: #3178C0;*/
 
 }
 
-#hours li:hover {
+#hours li:hover, #week li:hover {
     background-color: #FFF;
-    transform: scale(1.1);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
     z-index: 999;
     border: 2px solid #FBB160;
     box-shadow: 0 0 5px #FBB160;
 }
 
-#hours li:focus {
+#hours li:focus, #week li:focus {
     border: 2px solid #FBB160;
     box-shadow: 0 0 5px #FBB160;
 }
 
-#hours li a{
+#hours li a, #week li a{
 	box-shadow: 1px 1px 2px #DDDDDD;
     display: block;
     height: 100%;
@@ -192,9 +193,18 @@ border-left-color: #3178C0;*/
     position: relative;
     text-align: center;
     width: 100%;
+    color: #FFF;
+	text-decoration: none;
+	text-shadow: 0px -2px #2980B9;
+	font-family: 'Pacifico', cursive;
+	font-size: 23px;
 }
 
-#hours .arrows {
+#hours li a:HOVER, #week li a:HOVER{
+    color: #3498DB;
+}
+
+#hours .arrows, #week .arrows {
 	background-color: #3498DB;
 	width: 40px;
 	height: 90px;
@@ -203,7 +213,7 @@ border-left-color: #3178C0;*/
 	
 }
 
-#hours a.hour_next, #hours a.hour_prev {
+#hours a.hour_next, #hours a.hour_prev, #week a.day_next, #week a.day_prev {
     background-image: url("../../Imagenes/arrows.png");
     display: block;
     height: 67px;
@@ -214,18 +224,18 @@ border-left-color: #3178C0;*/
     z-index: 60;
 }
 
-#hours a.hour_next {
+#hours a.hour_next, #week a.day_next {
     background-position: 0 0;
     right: -7px;
 }
-#hours a.hour_prev {
+#hours a.hour_prev, #week a.day_prev {
     background-position: 0 100%;
     left: -7px;
 }
-#hours a.hour_next:hover {
+#hours a.hour_next:hover, #week a.day_next:hover {
     background-position: 100% 0;
 }
-#hours a.hour_prev:hover {
+#hours a.hour_prev:hover, #week a.day_prev:hover {
     background-position: 100% 100%;
 }
 
@@ -238,10 +248,21 @@ border-left-color: #3178C0;*/
     position: absolute;
     top: 30px;
     width: 80px;
+    display:block;
 }
 
 .hour-icon-mañana {
     background-image: url("../../Imagenes/amanecer.png");
+    background-size: 60px auto;
+}
+
+.hour-icon-tarde {
+    background-image: url("../../Imagenes/atardecer.png");
+    background-size: 60px auto;
+}
+
+.hour-icon-noche {
+    background-image: url("../../Imagenes/noche.png");
     background-size: 60px auto;
 }
 
