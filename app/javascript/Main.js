@@ -7,136 +7,220 @@ var Main = (function() {
 	var fechaActual;
 	var diaSemana;
 	var tareasSemana = [];
-	var tareasDeHoy=[];
-	
+	var tareasDeHoy = [];
+
 	function _onLoad() {
 		try {
 			fechaActual = new Date();
 			diaSemana = fechaActual.getDay() - 1;
 			_enableKeys();
 			widgetAPI.sendReadyEvent();
-			
 
 			// importedJSON.prueba();
 			// alert(importedJSON.miVariable);
 			_pantallaDia();
 
 			// alert(horaActual);
-			//alert("fin onLoad");
+			// alert("fin onLoad");
 		} catch (e) {
 			alert(e);
 		}
 	}
 	;
-	
-	
+
 	function _pantallaDia() {
 		alert("pantallaDia");
 		userList.init(Main.paintTareas);
 	}
 
 	function _pintaBarraHours() {
-		alert("_pintaBarraHours"+tareasDeHoy.length);
-	
+		alert("_pintaBarraHours" + tareasDeHoy.length);
+
+		
 		
 		capaBarraHours = document.getElementById("hours");
 		var escalaHoras = fechaActual.getHours();
-		var ulBarraHours = "<ul>"
-				+ "<li id=\"leftArrow\" class=\"arrows\"><img src=\"\" alt=\"leftArrow\"/></li>"
-				+ "<li><a href=\"#\">Ahora<i class=\"mañana\"></i></a></li>";
 
-		for ( var i = 1; i < 5; i++) {
-			ulBarraHours += "<li><a href=\"#\">" + escalaHoras++
-					+ ":00</a></li>";
+//		var ulBarraHours = "<ul>"
+//				+ "<li id=\"leftArrow\" class=\"arrows\"><img src=\"\" alt=\"leftArrow\"/></li>"
+//				+ "<li><a href=\"#\">Ahora<i class=\"mañana\"></i></a></li>";
+		var ulBarraHours = "<ul><li><a href=\"#\">Ahora<span class=\"hour-icon hour-icon-mañana\" data-type=\"icon\" style=\"display: block; top: 30px; background-position: left top;\"></span></a></li>";
+		
+		
+		// for ( var i = 1; i < 5; i++) {
+		// ulBarraHours += "<li><a href=\"#\">" + escalaHoras++
+		// + ":00</a></li>";
+		// }
+
+		// alert("tareasDeHoy"+tareasDeHoy[0].hora);
+
+		/**
+		 * mñn 7-13
+		 * tarde 14-20
+		 * noche 21-6
+		 */
+		
+		var tareasBarra = 0;
+
+		 alert("horaactual"+fechaActual.getHours()+":"+fechaActual.getMinutes());
+		 document.getElementById("fecha").innerHTML=fechaActual.getHours()+":"+fechaActual.getMinutes();
+		for ( var i = 0; i < tareasDeHoy.length; i++) {
+
+			// alert("tareasDeHoy[i].hora"+tareasDeHoy[i].hora);
+			var descomponeHora = (tareasDeHoy[i].hora).split(":");
+			 alert("descomponeHora0:"+descomponeHora[0]);
+			 alert("descomponeHora1:"+descomponeHora[1]);
+
+			 var minDiaTarea=Number(descomponeHora[0]*60)+Number(descomponeHora[1]);
+			 alert("minDiaTarea"+minDiaTarea);
+			 
+			 var minDiaActual=Number(fechaActual.getHours()*60)+Number(fechaActual.getMinutes());
+			 alert("minDiaActual"+minDiaActual);
+			 
+			 if (minDiaTarea>=minDiaActual) {
+				alert("tareaFutura");
+				 //ulBarraHours += "<li><a href=\"#\">" + tareasDeHoy[i].hora + "</a></li>";
+				
+				 
+				ulBarraHours += "<li><a href=\"#\">"+ tareasDeHoy[i].hora+"<span class=\"hour-icon hour-icon-mañana\" data-type=\"icon\" style=\"display: block; top: 30px; background-position: left top;\"></span></a></li>";
+					
+
+			}
+			 else {
+				alert("tareapasada");
+			}
+			 
 		}
-		ulBarraHours += "<li id=\"rightArrow\" class=\"arrows\"><img src=\"images/movie_btn_icon_stop_n.png\" alt=\"rightArrow\"/></li>"
-				+ "</ul>";
+
+		ulBarraHours +="</ul><div id=\"rightArrow\" class=\"arrows\"><a href=\"#\"></a></div>"+
+		"<a class=\"hour_next\" href=\"#\"></a>"+
+		"<a class=\"hour_prev\" href=\"#\"></a>";
 
 		capaBarraHours.innerHTML = ulBarraHours;
 	}
 
 	function _paintTareas(jsonDataRecv) {
 		alert("dentro de print data");
-		
+
 		var jsonArray = importedJSON.parseaJSON(jsonDataRecv);
 		// alert(jsonArray);
 		for ( var i = 2; i < jsonArray.length; i++) {
 			tareasSemana.push(jsonArray[i]);
 		}
 
-//		for ( var i = 0; i < tareasSemana.length; i++) {
-//			alert("i=" + i + " " + tareasSemana[i].tarea);
-//
-//		}
-		//alert("usuario:" + jsonArray[0]);
-		//alert("hoy es: " + diaSemana);
-		//alert("Numero tareas de hoy:");
-		//alert((tareasSemana[diaSemana].tarea).length);
+		// for ( var i = 0; i < tareasSemana.length; i++) {
+		// alert("i=" + i + " " + tareasSemana[i].tarea);
+		//
+		// }
+		// alert("usuario:" + jsonArray[0]);
+		// alert("hoy es: " + diaSemana);
+		// alert("Numero tareas de hoy:");
+		// alert((tareasSemana[diaSemana].tarea).length);
 
 		var nombreUsu = jsonArray[0];
-		document.getElementById("perfil").innerHTML = nombreUsu;
 
 		var iconoUsu = jsonArray[1];
 		var unaIMG = document.createElement("img");
+		unaIMG.setAttribute('class', "image-perfil");
 		unaIMG.setAttribute('src', iconoUsu);
-		unaIMG.setAttribute('alt', 'na');
-		unaIMG.setAttribute('height', '100px');
-		unaIMG.setAttribute('width', '100px');
+		unaIMG.setAttribute('alt', 'name');
+		//unaIMG.setAttribute('height', '100px');
+		//unaIMG.setAttribute('width', '100px');
 		document.getElementById("perfil").appendChild(unaIMG);
+		document.getElementById("perfil").innerHTML = document.getElementById("perfil").innerHTML+"<div id=\"name\">"+nombreUsu+"</div>" ;
 
-		alert("JSL"+jsonArray.length);
-		tareasSemana=[];
+		
+		alert("JSL" + jsonArray.length);
+		tareasSemana = [];
 		for ( var i = 2; i < jsonArray.length; i++) {
-			alert("i="+i);
+			alert("i=" + i);
 			tareasSemana.push(jsonArray[i]);
 			alert(tareasSemana.length);
-			 //alert(jsonArray[i].tarea);
+			// alert(jsonArray[i].tarea);
 		}
 
-		//alert(diaSemana);
-		alert("ts"+tareasSemana.length);
-		
-		//tareasDeHoy.push(tareasSemana[diaSemana]);
-		alert("hoy"+diaSemana);
-		alert("tareasSemana[hoy]"+tareasSemana[diaSemana].tarea[0].hora);
-		alert( (tareasSemana[diaSemana].tarea).length);
-		for ( var i = 0; i <(tareasSemana[diaSemana].tarea).length; i++) {
-			
+		// alert(diaSemana);
+		alert("ts" + tareasSemana.length);
+
+		// tareasDeHoy.push(tareasSemana[diaSemana]);
+		alert("hoy" + diaSemana);
+		alert("tareasSemana[hoy]" + tareasSemana[diaSemana].tarea[0].hora);
+		alert((tareasSemana[diaSemana].tarea).length);
+		for ( var i = 0; i < (tareasSemana[diaSemana].tarea).length; i++) {
+
 			alert(tareasSemana[diaSemana].tarea[i].hora);
 			tareasDeHoy.push(tareasSemana[diaSemana].tarea[i]);
 		}
-		
-		
-		
-		alert("tareasDeHoy :"+tareasDeHoy.length);
+
+		alert("tareasDeHoy :" + tareasDeHoy.length);
 		// document.getElementById("numTareas").innerHTML="Numero Tareas de
 		// hoy:"+tareasDeHoy.length;
 
-	//	alert("EMPIEZA EL FOR TAREAS");
-		for ( var i = 0; i < tareasDeHoy.length; i++) {
-			var imagenTarea = document.createElement("img");
-			//alert(tareasDeHoy[i].image);
-			imagenTarea.setAttribute('src', tareasDeHoy[i].image);
-			imagenTarea.setAttribute('alt', 'na');
-			imagenTarea.setAttribute('height', '50px');
-			imagenTarea.setAttribute('width', '50px');
+		// alert("EMPIEZA EL FOR TAREAS");
+		
+		/**/
+		
+		
+//		for ( var i = 0; i < tareasDeHoy.length; i++) {
+//			var imagenTarea = document.createElement("img");
+//			// alert(tareasDeHoy[i].image);
+//			imagenTarea.setAttribute('src', tareasDeHoy[i].image);
+//			imagenTarea.setAttribute('alt', 'na');
+//			imagenTarea.setAttribute('height', '50px');
+//			imagenTarea.setAttribute('width', '50px');
+//
+//			var tarea = document.createElement("div");
+//			var description = document.createElement("div");
+//
+//			// alert("tareasDeHoy[i] : "+tareasDeHoy[i].hora);
+//
+//			tarea.innerHTML = "<div id=\"tarea" + i + "\">"
+//					+ tareasDeHoy[i].hora + " - " + tareasDeHoy[i].title
+//					+ "</div>";
+//			description.innerHTML = "<div>" + tareasDeHoy[i].description
+//					+ "</div>";
+//
+//			document.getElementById("info").appendChild(tarea);
+//			document.getElementById("info").appendChild(description);
+//			document.getElementById("tarea" + i).appendChild(imagenTarea);
+//		}
+//		 alert("TERMINA EL FOR TAREAS");
+		
+		
+		/**/
+		
+		
+		///////////////////nueva creacion capas 250314 18:07
+		
+			
+		var	tituloActividad= document.createElement("div");
+		var	iconoActividad= document.createElement("div");
+		var	descripcionActividad= document.createElement("div");
+		var	horaActividad= document.createElement("div");
+			
+		alert("tareasDeHoy[0].title:"+tareasDeHoy[0].title);
+		
+		tituloActividad.innerHTML = "<div id=\"tituloActividad\">"+ tareasDeHoy[0].title +"</div>";
+		iconoActividad.innerHTML = "<div id=\"iconoActividad\"></div>";
+	
+		descripcionActividad.innerHTML = "<div id=\"descripcionActividad\">"+ tareasDeHoy[0].description +"</div>";
+		
+		horaActividad.innerHTML = "<div id=\"horaActividad\">"+ tareasDeHoy[0].hora +"</div>";
+		
+		var imagenTarea = document.createElement("img");
+		imagenTarea.setAttribute('src', tareasDeHoy[0].image);
+		imagenTarea.setAttribute('alt', 'na');
+		imagenTarea.setAttribute('height', '50px');
+		imagenTarea.setAttribute('width', '50px');
 
-			var tarea = document.createElement("div");
-			var description = document.createElement("div");
+		document.getElementById("info").appendChild(tituloActividad);
+		document.getElementById("info").appendChild(iconoActividad);
+		document.getElementById("iconoActividad").appendChild(imagenTarea);
+		document.getElementById("info").appendChild(descripcionActividad);
+		document.getElementById("info").appendChild(horaActividad);
 
-			// alert("tareasDeHoy[i] : "+tareasDeHoy[i].hora);
-
-			tarea.innerHTML = "<div id=\"tarea" + i + "\">"
-					+ tareasDeHoy[i].hora + " - " + tareasDeHoy[i].title
-					+ "</div>";
-			description.innerHTML = "<div>" + tareasDeHoy[i].description
-					+ "</div>";
-
-			document.getElementById("info").appendChild(tarea);
-			document.getElementById("info").appendChild(description);
-			document.getElementById("tarea" + i).appendChild(imagenTarea);
-		}
-	//	alert("TERMINA EL FOR TAREAS");
+		///////////////////FIN nueva creacion capas 250314 18:07
+		
 		_pintaBarraHours();
 	}
 	;
