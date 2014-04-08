@@ -10,13 +10,14 @@ var Main = (function() {
 	var MINMANHANA = 7, MAXMANHANA = 13, MINTARDE = MAXMANHANA + 1, MAXTARDE = 20, MINNOCHE = MAXTARDE + 1, MAXNOCHE = 6;
 	var demoMode = true, horaDemo = 15, minutosDemo = 40;
 	var plantillaBodyPantallaDia;
+	var TAG = "main.js";
 
 	function _onLoad() {
 		try {
 			_enableKeys();
 			widgetAPI.sendReadyEvent();
-			plantillaBodyPantallaDia = document.getElementById("allContent");
-			alert("plantillaBodyPantallaDia"+plantillaBodyPantallaDia+"-"+plantillaBodyPantallaDia.childNodes.length);
+			// plantillaBodyPantallaDia = document.getElementById("allContent");
+			// alert("plantillaBodyPantallaDia"+plantillaBodyPantallaDia+"-"+plantillaBodyPantallaDia.childNodes.length);
 			// importedJSON.prueba();
 			// alert(importedJSON.miVariable);
 			_pantallaDia();
@@ -24,7 +25,7 @@ var Main = (function() {
 			// alert(horaActual);
 			// alert("fin onLoad");
 		} catch (e) {
-			alert(e);
+			miLog.e(TAG, "Error en el catch dl onLoad" + e);
 		}
 	}
 	;
@@ -117,8 +118,9 @@ var Main = (function() {
 	}
 
 	function _pantallaDia() {
-		alert("pantallaDia");
-		userList.init(Main.paintTareas);
+		miLog.v(TAG, "pantallaDia");
+		// userList.init(Main.paintTareas);
+		userList.init(Main.restablecePantallaDia);
 	}
 
 	function _getFranja(hora) {
@@ -144,8 +146,7 @@ var Main = (function() {
 	}
 
 	function _pintaBarraHours() {
-		alert("_pintaBarraHours" + tareasDeHoy.length);
-
+		miLog.v(TAG, "_pintaBarraHours" + tareasDeHoy.length);
 		capaBarraHours = document.getElementById("hours");
 		var escalaHoras = _getHora();
 
@@ -165,23 +166,22 @@ var Main = (function() {
 		// alert("tareasDeHoy"+tareasDeHoy[0].hora);
 
 		var tareasBarra = 0;
-
-		alert("horaactual" + _getHora());
+		miLog.v(TAG, "hora actal" + _getHora());
 		document.getElementById("fecha").innerHTML = _getHora();
 		for ( var i = 0; i < tareasDeHoy.length; i++) {
 
 			// alert("tareasDeHoy[i].hora"+tareasDeHoy[i].hora);
 			var descomponeHora = (tareasDeHoy[i].hora).split(":");
-			alert("descomponeHora0:" + descomponeHora[0]);
-			alert("descomponeHora1:" + descomponeHora[1]);
+			miLog.v(TAG, "descomponeHora[0] y de [1]" + descomponeHora[0]
+					+ "***" + descomponeHora[1]);
 
 			var minDiaTarea = Number(descomponeHora[0] * 60)
 					+ Number(descomponeHora[1]);
-			alert("minDiaTarea" + minDiaTarea);
-			alert("minDiaActual" + _getMinutesTotalDia());
+			miLog.v(TAG, "minDiaTarea" + minDiaTarea);
+			miLog.v(TAG, "minDiaActual" + _getMinutesTotalDia());
 
 			if (minDiaTarea >= _getMinutesTotalDia()) {
-				alert("tareaFutura");
+				miLog.v(TAG, "tarea futura");
 				// ulBarraHours += "<li><a href=\"#\">" + tareasDeHoy[i].hora +
 				// "</a></li>";
 
@@ -191,7 +191,7 @@ var Main = (function() {
 						+ "\" data-type=\"icon\"></span></a></li>";
 
 			} else {
-				alert("tareapasada");
+				miLog.v(TAG, "tarea pasada");
 			}
 
 		}
@@ -203,77 +203,131 @@ var Main = (function() {
 		capaBarraHours.innerHTML = ulBarraHours;
 	}
 
-	function _restablecePantallaDia() {
-		alert("voy a vaciar el body");
-//		while (document.body.hasChildNodes()) {
-//			alert("while:"+document.body.hasChildNodes());
-//			document.body.removeChild(0);
-//			alert("eliminando en body");
-//		}
-		
-		document.body.replaceChild(plantillaBodyPantallaDia, document.getElementById("allContent"));
-		alert("body vacio");
-		//document.body=plantillaBodyPantallaDia;
-		//var todoBody=document.getElementById("allContent");
-		todoBody
-//		for ( var i = 0; i < plantillaBodyPantallaDia.childNodes.length; i++) {
-//			document.body.appendChild(plantillaBodyPantallaDia.childNodes.item(i));
-//			alert("elemento "+i);
-//		}
-		
-		//document.body.appendChild(plantillaBodyPantallaDia);
+	function _borraTodoElBody() {
+		miLog.d(TAG, "voy a vaciar el body: " + document.body.hasChildNodes());
+		while (document.body.hasChildNodes()) {
+			miLog.d(TAG, "eliminando en body");
+			alert("eliminando...")
+			document.body.removeChild(document.body.firstChild);
+		}
+		miLog.d(TAG, "body vacio");
+	}
+
+	function _creaDivHTML(id, inner, appendTo) {
+		var element = document.createElement("div");
+		element.innerHTML = inner;
+		element.setAttribute('id', id);
+
+		if (appendTo === document.body) {
+			document.body.appendChild(element);
+		} else {
+			document.getElementById(appendTo).appendChild(element);
+		}
+
 		
 	}
 
-	function _paintTareas(jsonDataRecv) {
-		alert("dentro de print data");
+	function _creaImgHTML(classAtribute, source, appendTo) {
+		var element = document.createElement("img");
+		element.setAttribute('class', classAtribute);
+		element.setAttribute('src', source);
+		// unaIMG.setAttribute('alt', altName);
+		document.getElementById(appendTo).appendChild(element);
+	}
 
-		//_restablecePantallaDia();
-		alert("despues de restablecer");
+	function _restableceAnchor() {
+		miLog.d(TAG, "restablece Anchor");
+		document.body.innerHTML = "<a href=\"javascript:void(0);\" id=\"anchor\" onkeydown=\"Main.keyDown();\"></a>";
+		// alert(document.body.innerHTML);
+		alert("anchor restablecido");
+	}
+
+	function _restableceIconoUsu(nombreUsu, iconoUsu) {
+		_creaImgHTML("image-perfil", iconoUsu, "perfil");
+	}
+
+	
+	function _restableceBotonera() {
+		document.getElementById("nav").innerHTML="<ul>"+
+					"<li id=\"botonDay\" class=\"boton animate\">Ahora</li>"+
+					"<li id=\"botonWeek\" class=\"boton animate\">Semana</li>"+
+					"<li id=\"botonAlerts\" class=\"boton animate\">Alertas</li>"+
+					"<li id=\"botonGames\" class=\"boton animate\">Diversión</li>"+
+					"<li id=\"botonSettings\" class=\"boton animate\">Ajustes</li>"+
+					"<li id=\"botonExit\" class=\"boton animate\">Salir</li>"+
+				"</ul>";
+	}
+	
+	function _restableceHeader(nombreUsu, iconoUsu) {
+		_creaDivHTML("header", "", document.body);		
+		_creaDivHTML("perfil", "", "header");
+	
+		_restableceIconoUsu(nombreUsu,iconoUsu);
+		_creaDivHTML("name", nombreUsu, "perfil");
+
+		_creaDivHTML("nav", "", "header");
+		_restableceBotonera();
 		
+		_creaDivHTML("fechaActual", "fechaActual", "header");
+		_creaDivHTML("horaActual", _getHora(), "header");
+	}
+
+	function _restableceContent(titulo,icono,desc,hora) {
+		_creaDivHTML("content", "", document.body);
+		_creaDivHTML("info", "", "content");
+		_creaDivHTML("tituloActividad", "<h1>"+titulo+"</h1>", "info");
+		_creaImgHTML("", icono, "info");
+		
+		
+		
+//		_creaDivHTML("descripcionActividad", "descripcionActividad", "info");
+//		_creaDivHTML("horaActividad", "horaActividad", "info");
+//		
+//		_creaDivHTML("hours", "", "content");
+		
+		
+	}
+	
+	function _restablecePantallaDia(jsonDataRecv) {
+		_borraTodoElBody();
+		_restableceAnchor();
+
 		var jsonArray = importedJSON.parseaJSON(jsonDataRecv);
-		// alert(jsonArray);
 		for ( var i = 2; i < jsonArray.length; i++) {
 			tareasSemana.push(jsonArray[i]);
 		}
+		alert("json Array creado:" + jsonArray.length);
 
-		// for ( var i = 0; i < tareasSemana.length; i++) {
-		// alert("i=" + i + " " + tareasSemana[i].tarea);
-		//
-		// }
-		// alert("usuario:" + jsonArray[0]);
-		// alert("hoy es: " + diaSemana);
-		// alert("Numero tareas de hoy:");
-		// alert((tareasSemana[diaSemana].tarea).length);
+		// JsonArray de 0 y de 1 son nombre usuario e icono usuario
+		_restableceHeader(jsonArray[0], jsonArray[1]);
+		alert("Header Restablecido");
+		_restableceContent(titulo,icono,desc,hora); <----------------------------
+		alert("Content Restablecido");
+		
+		
+		
 
-		var nombreUsu = jsonArray[0];
+		_creaDivHTML("id3", "prueba3");
+		_creaImgHTML(
+				"prueba",
+				"http://rlv.zcache.es/pequeno_icono_del_ciclomotor_pegatina-r5c3585660891443c983ac62adf063005_v9waf_8byvr_512.jpg",
+				"id3");
+		// alert(document.body.innerHTML);
+	}
 
-		var iconoUsu = jsonArray[1];
-		var unaIMG = document.createElement("img");
-		unaIMG.setAttribute('class', "image-perfil");
-		unaIMG.setAttribute('src', iconoUsu);
-		unaIMG.setAttribute('alt', 'name');
-		// unaIMG.setAttribute('height', '100px');
-		// unaIMG.setAttribute('width', '100px');
-		document.getElementById("perfil").appendChild(unaIMG);
-		document.getElementById("perfil").innerHTML = document
-				.getElementById("perfil").innerHTML
-				+ "<div id=\"name\">" + nombreUsu + "</div>";
+	function _paintTareas(jsonDataRecv) {
 
-		alert("JSL" + jsonArray.length);
 		tareasSemana = [];
 		for ( var i = 2; i < jsonArray.length; i++) {
-			alert("i=" + i);
 			tareasSemana.push(jsonArray[i]);
-			alert(tareasSemana.length);
 			// alert(jsonArray[i].tarea);
 		}
 
 		// alert(diaSemana);
-		alert("ts" + tareasSemana.length);
-
+		miLog.v(TAG, "tarea semana length" + tareasSemana.length);
 		// tareasDeHoy.push(tareasSemana[diaSemana]);
 		alert("hoy" + _getDiaSemana());
+
 		alert("tareasSemana[hoy]" + tareasSemana[_getDiaSemana()].tarea[0].hora);
 		alert((tareasSemana[_getDiaSemana()].tarea).length);
 		for ( var i = 0; i < (tareasSemana[_getDiaSemana()].tarea).length; i++) {
@@ -368,16 +422,16 @@ var Main = (function() {
 
 	function resetButtons() {
 
-//		for ( var i = 0; i < numEnlaces; i++) {
-//
-//			document.getElementById("enlace" + i).style.border = "0px";
-//		}
+		// for ( var i = 0; i < numEnlaces; i++) {
+		//
+		// document.getElementById("enlace" + i).style.border = "0px";
+		// }
 
 	}
 
 	function _keyDown() {
 		var keyCode = event.keyCode;
-		alert("keycode:"+keyCode);
+		alert("keycode:" + keyCode);
 		switch (keyCode) {
 		case tvKey.KEY_RETURN:
 		case tvKey.KEY_PANEL_RETURN:
@@ -463,7 +517,7 @@ var Main = (function() {
 			resetButtons();
 			_incrementaHoraDemo();
 			_pantallaDia();
-			
+
 			// widgetAPI.putInnerHTML(info, "Has pulsado 2");
 			break;
 		case tvKey.KEY_3:
@@ -528,8 +582,12 @@ var Main = (function() {
 		keyDown : function() {
 			_keyDown();
 		},
-		paintTareas : function(jsonDataRecv) {
-			_paintTareas(jsonDataRecv);
+		// paintTareas : function(jsonDataRecv) {
+		// _paintTareas(jsonDataRecv);
+		// }
+
+		restablecePantallaDia : function(jsonDataRecv) {
+			_restablecePantallaDia(jsonDataRecv);
 		}
 	};
 })();
