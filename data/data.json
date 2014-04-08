@@ -26,18 +26,64 @@
       "mar": {
         "tarea": [
           {
-            "hora": "01:03",
-			"duracion": "10",
-            "image": "http://es.fordesigner.com/imguploads/Image/cjbc/zcool/png20080526/1211809482.png",
-            "title": "titulo de 0101",
-            "description": "Descripcion de 0101"
-          },
-          {
             "hora": "02:02",
 			"duracion": "10",
             "image": "http://images.all-free-download.com/images/graphiclarge/server_small_case_icon_blue_clip_art_7457.jpg",
             "title": "Titulo de 0202",
             "description": "Descripcion de 0202"
+          },
+          {
+            "hora": "08:03",
+            "duracion": "10",
+            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
+            "title": "Titulo de 0303",
+            "description": "Descripcion de 0303"
+          },
+          {
+            "hora": "15:30",
+            "duracion": "10",
+            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
+            "title": "Titulo de 0303",
+            "description": "Descripcion de 0303"
+          },
+          {
+            "hora": "15:59",
+            "duracion": "10",
+            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
+            "title": "Titulo de 0303",
+            "description": "Descripcion de 0303"
+          } ,
+          {
+            "hora": "18:03",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
+            "title": "Al parque",
+            "description": "Es hora de ir al parque"
+          },
+          {
+            "hora": "19:30",
+            "duracion": "10",
+            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
+            "title": "Titulo de 0303",
+            "description": "Descripcion de 0303"
+          },
+          {
+            "hora": "21:32",
+            "duracion": "10",
+            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
+            "title": "Titulo de 0303",
+            "description": "Descripcion de 0303"
+          }
+        ]
+      },
+      "mie": {
+        "tarea": [
+          {
+            "hora": "02:02",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
+            "title": "Al parque",
+            "description": "Es hora de ir al parque"
           },
           {
             "hora": "03:03",
@@ -59,6 +105,13 @@
             "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
             "title": "Titulo de 0303",
             "description": "Descripcion de 0303"
+          } ,
+          {
+            "hora": "18:03",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
+            "title": "Al parque",
+            "description": "Es hora de ir al parque"
           },
           {
             "hora": "19:30",
@@ -70,20 +123,19 @@
           {
             "hora": "19:32",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5ng",
             "title": "Titulo de 0303",
             "description": "Descripcion de 0303"
           },
           {
             "hora": "20:13",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
             "title": "Titulo de 0303",
             "description": "Descripcion de 0303"
           }
         ]
       },
-      "mie": " ",
       "jue": " ",
       "vie": " ",
       "sab": " ",
