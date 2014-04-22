@@ -200,7 +200,13 @@ border-left-color: #3178C0;*/
 	clear: both;
 	/*background-color: #79C6CD;*/
 	padding:25px;
+	text-align:center;
 
+}
+
+#iconoActividad img {
+	max-width: 540px;
+	max-height: 240px;	
 }
 
 #descripcionActividad {

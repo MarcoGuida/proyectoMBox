@@ -8,7 +8,7 @@ var Main = (function() {
 	var tareasSemana = [];
 	var tareasDeHoy = [];
 	var MINMANHANA = 7, MAXMANHANA = 13, MINTARDE = MAXMANHANA + 1, MAXTARDE = 20, MINNOCHE = MAXTARDE + 1, MAXNOCHE = 6;
-	var demoMode = true, horaDemo = 15, minutosDemo = 40;
+	var demoMode = false, horaDemo = 15, minutosDemo = 40;
 	var plantillaBodyPantallaDia;
 	var TAG = "main.js";
 
@@ -146,8 +146,10 @@ var Main = (function() {
 	}
 
 	function _pintaBarraHours() {
-		miLog.v(TAG, "_pintaBarraHours" + tareasDeHoy.length);
+		//miLog.v(TAG, "_pintaBarraHours" + tareasDeHoy.length);
+		
 		capaBarraHours = document.getElementById("hours");
+		alert("capaBarraHours"+capaBarraHours);
 		var escalaHoras = _getHora();
 
 		// var ulBarraHours = "<ul>"
@@ -166,8 +168,9 @@ var Main = (function() {
 		// alert("tareasDeHoy"+tareasDeHoy[0].hora);
 
 		var tareasBarra = 0;
-		miLog.v(TAG, "hora actal" + _getHora());
-		document.getElementById("fecha").innerHTML = _getHora();
+		
+		//miLog.v(TAG, "hora actal" + _getHora());
+		//document.getElementById("fecha").innerHTML = _getHora();
 		for ( var i = 0; i < tareasDeHoy.length; i++) {
 
 			// alert("tareasDeHoy[i].hora"+tareasDeHoy[i].hora);
@@ -201,6 +204,7 @@ var Main = (function() {
 				+ "<a class=\"hour_prev\" href=\"#\"></a>";
 
 		capaBarraHours.innerHTML = ulBarraHours;
+		alert("_pintaBarraHours");
 	}
 
 	function _borraTodoElBody() {
@@ -213,11 +217,18 @@ var Main = (function() {
 		miLog.d(TAG, "body vacio");
 	}
 
-	function _creaDivHTML(id, inner, appendTo) {
+	function _creaDivHTML(id, inner, appendTo,claseAsociada) {
 		var element = document.createElement("div");
 		element.innerHTML = inner;
 		element.setAttribute('id', id);
-
+		
+		if(claseAsociada.length>0)
+			{
+			element.setAttribute('class', claseAsociada);
+			
+			}
+		
+		
 		if (appendTo === document.body) {
 			document.body.appendChild(element);
 		} else {
@@ -259,32 +270,82 @@ var Main = (function() {
 	}
 	
 	function _restableceHeader(nombreUsu, iconoUsu) {
-		_creaDivHTML("header", "", document.body);		
-		_creaDivHTML("perfil", "", "header");
+		_creaDivHTML("header", "", document.body,"");		
+		_creaDivHTML("perfil", "", "header","");
 	
 		_restableceIconoUsu(nombreUsu,iconoUsu);
-		_creaDivHTML("name", nombreUsu, "perfil");
+		_creaDivHTML("name", nombreUsu, "perfil","");
 
-		_creaDivHTML("nav", "", "header");
+		_creaDivHTML("nav", "", "header","");
 		_restableceBotonera();
 		
-		_creaDivHTML("fechaActual", "fechaActual", "header");
-		_creaDivHTML("horaActual", _getHora(), "header");
+		_creaDivHTML("fechaActual", "fechaActual", "header","");
+		_creaDivHTML("horaActual", _getHora(), "header","");
 	}
 
+	function _dibujaDigits(hora) {
+		var creaDigits="";
+		
+		
+		var cadaDigitHora = (hora).split(":");//<------------------------
+		
+		for ( var int = 0; int < 2; int++) {
+			creaDigits+="<div class=\"zero\">";
+			
+			creaDigits+="<span class=\"d1\"></span>"+
+			"<span class=\"d2\"></span>"+
+			"<span class=\"d3\"></span>"+
+			"<span class=\"d4\"></span>"+
+			"<span class=\"d5\"></span>"+
+			"<span class=\"d6\"></span>"+
+			"<span class=\"d7\"></span>"+
+			"</div>";
+		}
+		
+		creaDigits+="<div class=\"dots\"></div>";
+		
+		for ( var int = 0; int < 2; int++) {
+			creaDigits+="<div class=\"zero\">";
+			
+			creaDigits+="<span class=\"d1\"></span>"+
+			"<span class=\"d2\"></span>"+
+			"<span class=\"d3\"></span>"+
+			"<span class=\"d4\"></span>"+
+			"<span class=\"d5\"></span>"+
+			"<span class=\"d6\"></span>"+
+			"<span class=\"d7\"></span>"+
+			"</div>";
+		}
+		
+		
+		return creaDigits;
+								
+	}
+	
 	function _restableceContent(titulo,icono,desc,hora) {
-		_creaDivHTML("content", "", document.body);
-		_creaDivHTML("info", "", "content");
-		_creaDivHTML("tituloActividad", "<h1>"+titulo+"</h1>", "info");
-		_creaImgHTML("", icono, "info");
+		_creaDivHTML("content", "", document.body,"");
+		_creaDivHTML("info", "", "content","");
+		_creaDivHTML("tituloActividad", "<h1>"+titulo+"</h1>", "info","");
+		_creaDivHTML("iconoActividad","","info","");
+		_creaImgHTML("", icono, "iconoActividad","");
+		_creaDivHTML("descripcionActividad", desc, "info","");
+		_creaDivHTML("horaActividad", "<h3>Hora: "+hora+"</h3>", "info","");
+
 		
+		_creaDivHTML("clock", "", "horaActividad","light");
+		_creaDivHTML("display", "", "clock","display");
+		_creaDivHTML("", "", "display","weekdays");
+		_creaDivHTML("", "", "display","ampm");
+		_creaDivHTML("", "", "display","alarm");
+		_creaDivHTML("",  _dibujaDigits("07:15"), "display","digits");
+
 		
+	
 		
-//		_creaDivHTML("descripcionActividad", "descripcionActividad", "info");
-//		_creaDivHTML("horaActividad", "horaActividad", "info");
-//		
-//		_creaDivHTML("hours", "", "content");
+
 		
+		_creaDivHTML("hours", "", "content","");
+		//_creaDivHTML("hours", "", "content");
 		
 	}
 	
@@ -301,7 +362,70 @@ var Main = (function() {
 		// JsonArray de 0 y de 1 son nombre usuario e icono usuario
 		_restableceHeader(jsonArray[0], jsonArray[1]);
 		alert("Header Restablecido");
-		_restableceContent(titulo,icono,desc,hora); <----------------------------
+		
+		
+		////////
+//210414se puede optimizar, me hace falta para pintar solo la proxima tarea
+		
+		for ( var i = 0; i < (tareasSemana[_getDiaSemana()].tarea).length; i++) {
+
+			alert(tareasSemana[_getDiaSemana()].tarea[i].hora);
+			tareasDeHoy.push(tareasSemana[_getDiaSemana()].tarea[i]);
+		}
+		
+		
+		
+		var titulo,icono,desc,hora;
+		
+		for ( var i = 0; i < tareasDeHoy.length; i++) {
+
+			// alert("tareasDeHoy[i].hora"+tareasDeHoy[i].hora);
+			var descomponeHora = (tareasDeHoy[i].hora).split(":");
+			miLog.v(TAG, "descomponeHora[0] y de [1]" + descomponeHora[0]
+					+ "***" + descomponeHora[1]);
+
+			var minDiaTarea = Number(descomponeHora[0] * 60)
+					+ Number(descomponeHora[1]);
+			miLog.v(TAG, "minDiaTarea" + minDiaTarea);
+			miLog.v(TAG, "minDiaActual" + _getMinutesTotalDia());
+
+			if (minDiaTarea >= _getMinutesTotalDia()) {
+				miLog.v(TAG, "tarea futura");
+				
+				
+				alert("prueba 2104");
+				alert(tareasDeHoy[i].title);
+				alert(tareasDeHoy[i].image);
+				alert(tareasDeHoy[i].description);
+				alert(tareasDeHoy[i].hora);
+				
+				titulo=tareasDeHoy[i].title;
+				icono=tareasDeHoy[i].image;
+				desc=tareasDeHoy[i].description;
+				hora=tareasDeHoy[i].hora;
+				alert("prueba 2104");
+				break;
+
+			} else {
+				miLog.v(TAG, "tarea pasada");
+			}
+
+		}
+
+		
+//210414	
+		////////
+		
+		
+		
+		
+		//alert(titulo);
+	//	alert(icono);
+	//	alert(desc);
+	//	alert(hora);
+		_restableceContent(titulo,icono,desc,hora);// <----------------------------
+		alert("voy a pintar la barra de horas");
+		_pintaBarraHours();
 		alert("Content Restablecido");
 		
 		
