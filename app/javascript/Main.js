@@ -45,11 +45,9 @@ var Main = (function() {
 	
 	function _getDiaSemana() {
 		fechaActual = new Date();
-		if (demoMode) {
-			return 1;
-		} else {
+		
 			return fechaActual.getDay() - 1;
-		}
+		
 	}
 
 	function _getMinutesTotalDia() {
@@ -200,19 +198,27 @@ var Main = (function() {
 				miLog.v(TAG, "tarea futura");
 				// ulBarraHours += "<li><a href=\"#\">" + tareasDeHoy[i].hora +
 				// "</a></li>";
-
-				ulBarraHours += "<li><a href=\"#\">" + tareasDeHoy[i].hora
-						+ "<span class=\"hour-icon hour-icon-"
-						+ _getFranja(tareasDeHoy[i].hora)
-						+ "\" data-type=\"icon\"></span></a></li>";
+				
+				
+				if(tareasBarra<=5) {
+					ulBarraHours += "<li><a href=\"#\">" + tareasDeHoy[i].hora
+					+ "<span class=\"hour-icon hour-icon-"
+					+ _getFranja(tareasDeHoy[i].hora)
+					+ "\" data-type=\"icon\"></span></a></li>";
+					tareasBarra++;
+				}
+				
+				
 
 			} else {
 				miLog.v(TAG, "tarea pasada");
 			}
-			if(i>=5)
-				{
-				break;
-				}
+
+		}
+		
+		while (tareasBarra<=5) {
+			ulBarraHours += "<li class=\"disabled\"><a href=\"#\"></li>";
+			tareasBarra++;
 		}
 
 		ulBarraHours += "</ul><div id=\"rightArrow\" class=\"arrows\"><a href=\"#\"></a></div>"
@@ -220,7 +226,7 @@ var Main = (function() {
 				+ "<a class=\"hour_prev\" href=\"#\"></a>";
 
 		capaBarraHours.innerHTML = ulBarraHours;
-		alert("_pintaBarraHours");
+		alert("_pintaBarraHours: "+ulBarraHours);
 	}
 
 	function _borraTodoElBody() {
@@ -283,6 +289,12 @@ var Main = (function() {
 	}
 
 	function _restableceHeader(nombreUsu, iconoUsu) {
+		if(demoMode)
+		{
+			nombreUsu="DEMO";
+		}
+		
+		
 		_creaDivHTML("header", "", document.body, "");
 		_creaDivHTML("perfil", "", "header", "");
 
@@ -390,18 +402,28 @@ var Main = (function() {
 	function _restableceContent(titulo, icono, desc, hora) {
 		_creaDivHTML("content", "", document.body, "");
 		_creaDivHTML("info", "", "content", "");
-		_creaDivHTML("tituloActividad", "<h1>" + titulo + "</h1>", "info", "");
-		_creaDivHTML("iconoActividad", "", "info", "");
-		_creaImgHTML("", icono, "iconoActividad", "");
-		_creaDivHTML("descripcionActividad", desc, "info", "");
-		_creaDivHTML("horaActividad", "<h3>Hora:</h3>", "info", "");
+		alert("UNDEFINED???[[["+titulo+"]]]");
+		if(!titulo)
+			{
+				titulo="No hay tareas para hoy";
+				_creaDivHTML("tituloActividad", "<h1>" + titulo + "</h1>", "info", "");
+			}
+		else {
+			_creaDivHTML("tituloActividad", "<h1>" + titulo + "</h1>", "info", "");
+			_creaDivHTML("iconoActividad", "", "info", "");
+			_creaImgHTML("", icono, "iconoActividad", "");
+			_creaDivHTML("descripcionActividad", desc, "info", "");
+			_creaDivHTML("horaActividad", "<h3>Hora:</h3>", "info", "");
 
-		_creaDivHTML("clock", "", "horaActividad", "light");
-		_creaDivHTML("display", "", "clock", "display");
-		_creaDivHTML("", "", "display", "weekdays");
-		_creaDivHTML("", "", "display", "ampm");
-		_creaDivHTML("", "", "display", "alarm");
-		_creaDivHTML("", _dibujaDigits(hora), "display", "digits");
+			_creaDivHTML("clock", "", "horaActividad", "light");
+			_creaDivHTML("display", "", "clock", "display");
+			_creaDivHTML("", "", "display", "weekdays");
+			_creaDivHTML("", "", "display", "ampm");
+			_creaDivHTML("", "", "display", "alarm");
+			_creaDivHTML("", _dibujaDigits(hora), "display", "digits");
+		}
+		
+		
 
 		_creaDivHTML("hours", "", "content", "");
 		// _creaDivHTML("hours", "", "content");
@@ -688,9 +710,11 @@ var Main = (function() {
 		case tvKey.KEY_2:
 			alert("2");
 			//resetButtons();
+			if (demoMode) {
 			_incrementaHoraDemo();
-			//_pantallaDia();
 			_onLoad();
+			}
+			//_pantallaDia();
 			// widgetAPI.putInnerHTML(info, "Has pulsado 2");
 			break;
 		case tvKey.KEY_3:
@@ -701,22 +725,28 @@ var Main = (function() {
 		case tvKey.KEY_4:
 			alert("4");
 			//resetButtons();
+			if (demoMode) {
 			_decrementaMinutosDemo();
-			//_pantallaDia();
 			_onLoad();
+			}
+			//_pantallaDia();
 			// widgetAPI.putInnerHTML(info, "Has pulsado 4");
 			break;
 		case tvKey.KEY_5:
 			alert("5");
-			resetButtons();
+			//resetButtons();
 			// widgetAPI.putInnerHTML(info, "Has pulsado 5");
+			demoMode=!demoMode;
+			_onLoad();
 			break;
 		case tvKey.KEY_6:
 			alert("6");
 			//resetButtons();
-			_incrementaMinutosDemo();
+			if (demoMode) {
+				_incrementaMinutosDemo();
+				_onLoad();
+			}
 			//_pantallaDia();
-			_onLoad();
 			// widgetAPI.putInnerHTML(info, "Has pulsado 6");
 			break;
 		case tvKey.KEY_7:
@@ -727,9 +757,11 @@ var Main = (function() {
 		case tvKey.KEY_8:
 			alert("8");
 			//resetButtons();
+			if (demoMode) {
 			_decrementaHoraDemo();
-			//_pantallaDia();
 			_onLoad();
+			}
+			//_pantallaDia();
 			// widgetAPI.putInnerHTML(info, "Has pulsado 8");
 			break;
 		case tvKey.KEY_9:
