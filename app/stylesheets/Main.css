@@ -52,7 +52,7 @@ border-left-color: #3178C0;*/
 
 .boton {
     position: relative;
-	padding: 5px 30px;
+	padding: 5px 30px 0;
   	margin: 0px 10px 10px 0px;
   	float: left;
 	border-radius: 10px;
@@ -68,7 +68,7 @@ border-left-color: #3178C0;*/
 
 .boton:before {
     display: block;
-    height: 22px;
+    height: 27px;
     line-height: 0;
     margin: 0 auto 6px;
     width: 32px;
@@ -311,7 +311,7 @@ border-left-color: #3178C0;*/
     background-position: 100% 100%;
 }
 
-.hour-icon {
+.hour-icon, .day-icon {
     background-color: rgba(0, 0, 0, 0);
     background-position: left top;
     background-repeat: no-repeat;
@@ -336,6 +336,41 @@ border-left-color: #3178C0;*/
 .hour-icon-noche {
     background-image: url("../../Imagenes/noche.png");
     background-size: 60px auto;
+}
+
+.day-icon-lunes {
+    background-image: url("../../Imagenes/letraL.jpg");
+    background-size: 50px auto;
+}
+
+.day-icon-martes {
+    background-image: url("../../Imagenes/letraM.jpg");
+    background-size: 50px auto;
+}
+
+.day-icon-miercoles {
+    background-image: url("../../Imagenes/letraX.jpg");
+    background-size: 50px auto;
+}
+
+.day-icon-jueves {
+    background-image: url("../../Imagenes/letraJ.jpg");
+    background-size: 50px auto;
+}
+
+.day-icon-viernes {
+    background-image: url("../../Imagenes/letraV.jpg");
+    background-size: 50px auto;
+}
+
+.day-icon-sabado {
+    background-image: url("../../Imagenes/letraS.jpg");
+    background-size: 50px auto;
+}
+
+.day-icon-domingo {
+    background-image: url("../../Imagenes/letraD.jpg");
+    background-size: 50px auto;
 }
 
 #advertisement {
