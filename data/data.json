@@ -1,420 +1,1015 @@
 {
   "xml": {
     "user": {
-      "nombre": "Fulanito",
-      "icono": "http://rlv.zcache.es/pequeno_icono_del_ciclomotor_pegatina-r5c3585660891443c983ac62adf063005_v9waf_8byvr_512.jpg"
+      "nombre": "Roger",
+      "icono": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0ODUucG5n"
     },
     "plan": {
       "lun": {
         "tarea": [
           {
-            "hora": "02:02",
+            "hora": "08:15",
 			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzUwOTkucG5n",
+            "title": "Levantarse.",
+            "description": "Levantarse después de dormir toda la noche."
+          },
+          {
+            "hora": "08:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY5MTIucG5n",
+            "title": "Asearse.",
+            "description": "Higiene personal."
+          },
+          {
+            "hora": "08:35",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI3ODEucG5n",
+            "title": "Vestirse.",
+            "description": "Hora de vestirse."
+          },
+          {
+            "hora": "08:45",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NjY3LnBuZw==",
+            "title": "Desayunar.",
+            "description": "Tomar el desayuno."
+          } ,
+		  {
+            "hora": "08:55",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de desayunar nos lavamos los dientes."
+          },
+          {
+            "hora": "09:00",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY0NTQucG5n",
+            "title": "Al colegio.",
+            "description": "Es hora de ir al colegio."
+          },
+          {
+            "hora": "13:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Ir a casa.",
+            "description": "Volvemos a casa."
+          },
+          {
+            "hora": "13:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Nos lavamos las manos antes de sentarnos a comer."
+          },
+          {
+            "hora": "13:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2MTEucG5n",
+            "title": "Comer.",
+            "description": "Nos sentamos en la silla porque es la hora de comer."
+          },
+		  {
+            "hora": "14:05",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de comer nos lavamos los dientes."
+          },
+		   {
+            "hora": "14:10",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NDI2LnBuZw==",
+            "title": "Siesta.",
+            "description": "Es la hora de descansar un ratito. Dormimos hasta la hora de la merienda."
+          },
+          {
+            "hora": "16:10",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2OTUucG5n",
+            "title": "Merienda.",
+            "description": "Es la hora de tomar la merienda."
+          },
+          {
+            "hora": "17:00",
+            "duracion": "10",
             "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "title": "Parque.",
+            "description": "Vamos a ir al parque a jugar."
           },
           {
-            "hora": "03:03",
+            "hora": "18:45",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:30",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:59",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Volvemos a casa.",
+            "description": "Después del parque volvemos a casa."
           } ,
           {
-            "hora": "18:03",
+            "hora": "19:00",
 			"duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Después de volver del parque nos lavamos las manos."
           },
           {
-            "hora": "19:30",
+            "hora": "19:05",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzgwMDgucG5n",
+            "title": "Realizamos juegos juntos.",
+            "description": "Vamos a jugar a la oca, a pintar y a leer."
           },
           {
-            "hora": "19:32",
+            "hora": "20:00",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5ng",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "Ducharse",
+            "description": "Es la hora de ducharse."
           },
-          {
-            "hora": "20:13",
+		  {
+            "hora": "20:20",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4Njc1LnBuZw==",
+            "title": "Cenar",
+            "description": "Nos sentamos en la silla porque es la hora de cenar."
+          },
+		  {
+            "hora": "21:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de cenar nos lavamos los dientes."
+          },
+		  {
+            "hora": "21:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "A la cama.",
+            "description": "Es hora de descansar. Vamos a la cama."
           }
         ]
       },
       "mar": {
         "tarea": [
           {
-            "hora": "02:02",
+            "hora": "08:15",
 			"duracion": "10",
-            "image": "http://images.all-free-download.com/images/graphiclarge/server_small_case_icon_blue_clip_art_7457.jpg",
-            "title": "Titulo de 0202",
-            "description": "Descripcion de 0202"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzUwOTkucG5n",
+            "title": "Levantarse.",
+            "description": "Levantarse después de dormir toda la noche."
           },
           {
-            "hora": "08:03",
+            "hora": "08:20",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY5MTIucG5n",
+            "title": "Asearse.",
+            "description": "Higiene personal."
           },
           {
-            "hora": "15:30",
+            "hora": "08:35",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI3ODEucG5n",
+            "title": "Vestirse",
+            "description": "Hora de vestirse."
           },
           {
-            "hora": "15:59",
+            "hora": "08:45",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 1559",
-            "description": "Descripcion de 1559"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NjY3LnBuZw==",
+            "title": "Desayunar",
+            "description": "Tomar el desayuno."
+          } ,
+		  {
+            "hora": "08:55",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de desayunar nos lavamos los dientes."
+          },
+          {
+            "hora": "09:00",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY0NTQucG5n",
+            "title": "Al colegio",
+            "description": "Es hora de ir al colegio"
+          },
+          {
+            "hora": "13:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Ir a casa.",
+            "description": "Volvemos a casa."
+          },
+          {
+            "hora": "13:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Nos lavamos las manos antes de sentarnos a comer."
+          },
+          {
+            "hora": "13:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2MTEucG5n",
+            "title": "Comer.",
+            "description": "Nos sentamos en la silla porque es la hora de comer."
+          },
+		  {
+            "hora": "14:05",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de comer nos lavamos los dientes."
+          },
+		   {
+            "hora": "14:10",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NDI2LnBuZw==",
+            "title": "Siesta.",
+            "description": "Es la hora de descansar un ratito. Dormimos hasta la hora de la merienda"
+          },
+          {
+            "hora": "16:10",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2OTUucG5n",
+            "title": "Merienda.",
+            "description": "Es la hora de tomar la merienda."
+          },
+          {
+            "hora": "17:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
+            "title": "Parque",
+            "description": "Vamos a ir al parque a jugar."
+          },
+          {
+            "hora": "18:45",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Volvemos a casa.",
+            "description": "Después del parque volvemos a casa."
           } ,
           {
-            "hora": "18:03",
+            "hora": "19:00",
 			"duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Después de volver del parque nos lavamos las manos."
           },
           {
-            "hora": "19:30",
+            "hora": "19:05",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDcucG5n",
+            "title": "Leer un cuento.",
+            "description": "Es la hora de contar cuentos."
           },
           {
-            "hora": "21:32",
+            "hora": "20:00",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "Ducharse",
+            "description": "Es la hora de ducharse."
+          },
+		  {
+            "hora": "20:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4Njc1LnBuZw==",
+            "title": "Cenar",
+            "description": "Nos sentamos en la silla porque es la hora de cenar."
+          },
+		  {
+            "hora": "21:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de cenar nos lavamos los dientes."
+          },
+		  {
+            "hora": "21:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "A la cama",
+            "description": "Es hora de descansar. Vamos a la cama."
           }
         ]
       },
       "mie": {
         "tarea": [
           {
-            "hora": "02:02",
+            "hora": "08:15",
 			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzUwOTkucG5n",
+            "title": "Levantarse.",
+            "description": "Levantarse después de dormir toda la noche."
+          },
+          {
+            "hora": "08:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY5MTIucG5n",
+            "title": "Asearse.",
+            "description": "Higiene personal."
+          },
+          {
+            "hora": "08:35",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI3ODEucG5n",
+            "title": "Vestirse",
+            "description": "Hora de vestirse."
+          },
+          {
+            "hora": "08:45",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NjY3LnBuZw==",
+            "title": "Desayunar",
+            "description": "Tomar el desayuno."
+          } ,
+		  {
+            "hora": "08:55",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de desayunar nos lavamos los dientes."
+          },
+          {
+            "hora": "09:00",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY0NTQucG5n",
+            "title": "Al colegio",
+            "description": "Es hora de ir al colegio"
+          },
+          {
+            "hora": "13:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Ir a casa.",
+            "description": "Volvemos a casa."
+          },
+          {
+            "hora": "13:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Nos lavamos las manos antes de sentarnos a comer."
+          },
+          {
+            "hora": "13:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2MTEucG5n",
+            "title": "Comer.",
+            "description": "Nos sentamos en la silla porque es la hora de comer."
+          },
+		  {
+            "hora": "14:05",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de comer nos lavamos los dientes."
+          },
+		   {
+            "hora": "14:10",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NDI2LnBuZw==",
+            "title": "Siesta.",
+            "description": "Es la hora de descansar un ratito. Dormimos hasta la hora de la merienda"
+          },
+          {
+            "hora": "16:10",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2OTUucG5n",
+            "title": "Merienda.",
+            "description": "Es la hora de tomar la merienda."
+          },
+          {
+            "hora": "17:00",
+            "duracion": "10",
             "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "title": "Parque",
+            "description": "Vamos a ir al parque a jugar."
           },
           {
-            "hora": "03:03",
+            "hora": "18:45",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:30",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:59",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Volvemos a casa.",
+            "description": "Después del parque volvemos a casa."
           } ,
           {
-            "hora": "18:03",
+            "hora": "19:00",
 			"duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Después de volver del parque nos lavamos las manos."
           },
           {
-            "hora": "19:30",
+            "hora": "19:05",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDcucG5n",
+            "title": "Leer un cuento.",
+            "description": "Es la hora de contar cuentos."
           },
           {
-            "hora": "19:32",
+            "hora": "20:00",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5ng",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "Ducharse",
+            "description": "Es la hora de ducharse."
           },
-          {
-            "hora": "20:13",
+		  {
+            "hora": "20:20",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4Njc1LnBuZw==",
+            "title": "Cenar",
+            "description": "Nos sentamos en la silla porque es la hora de cenar."
+          },
+		  {
+            "hora": "21:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de cenar nos lavamos los dientes."
+          },
+		  {
+            "hora": "21:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "A la cama",
+            "description": "Es hora de descansar. Vamos a la cama."
           }
         ]
       },
       "jue": {
         "tarea": [
           {
-            "hora": "02:02",
+            "hora": "08:15",
 			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzUwOTkucG5n",
+            "title": "Levantarse.",
+            "description": "Levantarse después de dormir toda la noche."
+          },
+          {
+            "hora": "08:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY5MTIucG5n",
+            "title": "Asearse.",
+            "description": "Higiene personal."
+          },
+          {
+            "hora": "08:35",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI3ODEucG5n",
+            "title": "Vestirse",
+            "description": "Hora de vestirse."
+          },
+          {
+            "hora": "08:45",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NjY3LnBuZw==",
+            "title": "Desayunar",
+            "description": "Tomar el desayuno."
+          } ,
+		  {
+            "hora": "08:55",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de desayunar nos lavamos los dientes."
+          },
+          {
+            "hora": "09:00",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY0NTQucG5n",
+            "title": "Al colegio",
+            "description": "Es hora de ir al colegio"
+          },
+          {
+            "hora": "13:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Ir a casa.",
+            "description": "Volvemos a casa."
+          },
+          {
+            "hora": "13:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Nos lavamos las manos antes de sentarnos a comer."
+          },
+          {
+            "hora": "13:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2MTEucG5n",
+            "title": "Comer.",
+            "description": "Nos sentamos en la silla porque es la hora de comer."
+          },
+		  {
+            "hora": "14:05",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de comer nos lavamos los dientes."
+          },
+		   {
+            "hora": "14:10",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NDI2LnBuZw==",
+            "title": "Siesta.",
+            "description": "Es la hora de descansar un ratito. Dormimos hasta la hora de la merienda"
+          },
+          {
+            "hora": "16:10",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2OTUucG5n",
+            "title": "Merienda.",
+            "description": "Es la hora de tomar la merienda."
+          },
+          {
+            "hora": "17:00",
+            "duracion": "10",
             "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "title": "Parque",
+            "description": "Vamos a ir al parque a jugar."
           },
           {
-            "hora": "03:03",
+            "hora": "18:45",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:30",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:59",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Volvemos a casa.",
+            "description": "Después del parque volvemos a casa."
           } ,
           {
-            "hora": "18:03",
+            "hora": "19:00",
 			"duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Después de volver del parque nos lavamos las manos."
           },
           {
-            "hora": "19:30",
+            "hora": "19:05",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDcucG5n",
+            "title": "Leer un cuento.",
+            "description": "Es la hora de contar cuentos."
           },
           {
-            "hora": "19:32",
+            "hora": "20:00",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5ng",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "Ducharse",
+            "description": "Es la hora de ducharse."
           },
-          {
-            "hora": "20:13",
+		  {
+            "hora": "20:20",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4Njc1LnBuZw==",
+            "title": "Cenar",
+            "description": "Nos sentamos en la silla porque es la hora de cenar."
+          },
+		  {
+            "hora": "21:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de cenar nos lavamos los dientes."
+          },
+		  {
+            "hora": "21:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "A la cama",
+            "description": "Es hora de descansar. Vamos a la cama."
           }
         ]
       },
       "vie": {
         "tarea": [
           {
-            "hora": "02:02",
+            "hora": "08:15",
 			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzUwOTkucG5n",
+            "title": "Levantarse.",
+            "description": "Levantarse después de dormir toda la noche."
+          },
+          {
+            "hora": "08:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY5MTIucG5n",
+            "title": "Asearse.",
+            "description": "Higiene personal."
+          },
+          {
+            "hora": "08:35",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI3ODEucG5n",
+            "title": "Vestirse",
+            "description": "Hora de vestirse."
+          },
+          {
+            "hora": "08:45",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NjY3LnBuZw==",
+            "title": "Desayunar",
+            "description": "Tomar el desayuno."
+          } ,
+		  {
+            "hora": "08:55",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de desayunar nos lavamos los dientes."
+          },
+          {
+            "hora": "09:00",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY0NTQucG5n",
+            "title": "Al colegio",
+            "description": "Es hora de ir al colegio"
+          },
+          {
+            "hora": "13:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Ir a casa.",
+            "description": "Volvemos a casa."
+          },
+          {
+            "hora": "13:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Nos lavamos las manos antes de sentarnos a comer."
+          },
+          {
+            "hora": "13:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2MTEucG5n",
+            "title": "Comer.",
+            "description": "Nos sentamos en la silla porque es la hora de comer."
+          },
+		  {
+            "hora": "14:05",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de comer nos lavamos los dientes."
+          },
+		   {
+            "hora": "14:10",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NDI2LnBuZw==",
+            "title": "Siesta.",
+            "description": "Es la hora de descansar un ratito. Dormimos hasta la hora de la merienda"
+          },
+          {
+            "hora": "16:10",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2OTUucG5n",
+            "title": "Merienda.",
+            "description": "Es la hora de tomar la merienda."
+          },
+          {
+            "hora": "17:00",
+            "duracion": "10",
             "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "title": "Parque",
+            "description": "Vamos a ir al parque a jugar."
           },
           {
-            "hora": "03:03",
+            "hora": "18:45",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:30",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:59",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Volvemos a casa.",
+            "description": "Después del parque volvemos a casa."
           } ,
           {
-            "hora": "18:03",
+            "hora": "19:00",
 			"duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Después de volver del parque nos lavamos las manos."
           },
           {
-            "hora": "19:30",
+            "hora": "19:05",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDcucG5n",
+            "title": "Leer un cuento.",
+            "description": "Es la hora de contar cuentos."
           },
           {
-            "hora": "19:32",
+            "hora": "20:00",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5ng",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "Ducharse",
+            "description": "Es la hora de ducharse."
           },
-          {
-            "hora": "20:13",
+		  {
+            "hora": "20:20",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4Njc1LnBuZw==",
+            "title": "Cenar",
+            "description": "Nos sentamos en la silla porque es la hora de cenar."
+          },
+		  {
+            "hora": "21:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de cenar nos lavamos los dientes."
+          },
+		  {
+            "hora": "21:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "A la cama",
+            "description": "Es hora de descansar. Vamos a la cama."
           }
         ]
       },
       "sab": {
         "tarea": [
           {
-            "hora": "02:02",
+            "hora": "08:15",
 			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzUwOTkucG5n",
+            "title": "Levantarse.",
+            "description": "Levantarse después de dormir toda la noche."
+          },
+          {
+            "hora": "08:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY5MTIucG5n",
+            "title": "Asearse.",
+            "description": "Higiene personal."
+          },
+          {
+            "hora": "08:35",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI3ODEucG5n",
+            "title": "Vestirse",
+            "description": "Hora de vestirse."
+          },
+          {
+            "hora": "08:45",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NjY3LnBuZw==",
+            "title": "Desayunar",
+            "description": "Tomar el desayuno."
+          } ,
+		  {
+            "hora": "08:55",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de desayunar nos lavamos los dientes."
+          },
+          {
+            "hora": "09:00",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzEwMTU4LnBuZw==",
+            "title": "Jugamos al tenis.",
+            "description": "Es hora de jugar al tenis"
+          },
+          {
+            "hora": "13:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Ir a casa.",
+            "description": "Volvemos a casa."
+          },
+          {
+            "hora": "13:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Nos lavamos las manos antes de sentarnos a comer."
+          },
+          {
+            "hora": "13:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2MTEucG5n",
+            "title": "Comer.",
+            "description": "Nos sentamos en la silla porque es la hora de comer."
+          },
+		  {
+            "hora": "14:05",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de comer nos lavamos los dientes."
+          },
+		   {
+            "hora": "14:10",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NDI2LnBuZw==",
+            "title": "Siesta.",
+            "description": "Es la hora de descansar un ratito. Dormimos hasta la hora de la merienda"
+          },
+          {
+            "hora": "16:10",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2OTUucG5n",
+            "title": "Merienda.",
+            "description": "Es la hora de tomar la merienda."
+          },
+          {
+            "hora": "17:00",
+            "duracion": "10",
             "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "title": "Parque",
+            "description": "Vamos a ir al parque a jugar."
           },
           {
-            "hora": "03:03",
+            "hora": "18:45",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:30",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:59",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Volvemos a casa.",
+            "description": "Después del parque volvemos a casa."
           } ,
           {
-            "hora": "18:03",
+            "hora": "19:00",
 			"duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Después de volver del parque nos lavamos las manos."
           },
           {
-            "hora": "19:30",
+            "hora": "19:05",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDcucG5n",
+            "title": "Leer un cuento.",
+            "description": "Es la hora de contar cuentos."
           },
           {
-            "hora": "19:32",
+            "hora": "20:00",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5ng",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "Ducharse",
+            "description": "Es la hora de ducharse."
           },
-          {
-            "hora": "20:13",
+		  {
+            "hora": "20:20",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4Njc1LnBuZw==",
+            "title": "Cenar",
+            "description": "Nos sentamos en la silla porque es la hora de cenar."
+          },
+		  {
+            "hora": "21:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de cenar nos lavamos los dientes."
+          },
+		  {
+            "hora": "21:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "A la cama",
+            "description": "Es hora de descansar. Vamos a la cama."
           }
         ]
       },
       "dom": {
         "tarea": [
           {
-            "hora": "02:02",
+            "hora": "09:00",
 			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzUwOTkucG5n",
+            "title": "Levantarse.",
+            "description": "Levantarse después de dormir toda la noche."
+          },
+          {
+            "hora": "09:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzY5MTIucG5n",
+            "title": "Asearse.",
+            "description": "Higiene personal."
+          },
+          {
+            "hora": "09:35",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI3ODEucG5n",
+            "title": "Vestirse",
+            "description": "Hora de vestirse."
+          },
+          {
+            "hora": "09:45",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NjY3LnBuZw==",
+            "title": "Desayunar",
+            "description": "Tomar el desayuno."
+          } ,
+		  {
+            "hora": "10:05",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de desayunar nos lavamos los dientes."
+          },
+          {
+            "hora": "10:30",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzU1MTcucG5n",
+            "title": "Paseo en bicicleta.",
+            "description": "Vamos a dar un paseo en bicicleta."
+          },
+          {
+            "hora": "13:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Ir a casa.",
+            "description": "Volvemos a casa."
+          },
+          {
+            "hora": "13:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Nos lavamos las manos antes de sentarnos a comer."
+          },
+          {
+            "hora": "13:20",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2MTEucG5n",
+            "title": "Comer.",
+            "description": "Nos sentamos en la silla porque es la hora de comer."
+          },
+		  {
+            "hora": "14:05",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de comer nos lavamos los dientes."
+          },
+		   {
+            "hora": "14:10",
+			"duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NDI2LnBuZw==",
+            "title": "Siesta.",
+            "description": "Es la hora de descansar un ratito. Dormimos hasta la hora de la merienda"
+          },
+          {
+            "hora": "16:10",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzQ2OTUucG5n",
+            "title": "Merienda.",
+            "description": "Es la hora de tomar la merienda."
+          },
+          {
+            "hora": "17:00",
+            "duracion": "10",
             "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "title": "Parque",
+            "description": "Vamos a ir al parque a jugar."
           },
           {
-            "hora": "03:03",
+            "hora": "18:45",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:30",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
-          },
-          {
-            "hora": "15:59",
-            "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMTcucG5n",
+            "title": "Volvemos a casa.",
+            "description": "Después del parque volvemos a casa."
           } ,
           {
-            "hora": "18:03",
+            "hora": "19:00",
 			"duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Al parque",
-            "description": "Es hora de ir al parque"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDMucG5n",
+            "title": "Lavarse las manos.",
+            "description": "Después de volver del parque nos lavamos las manos."
           },
           {
-            "hora": "19:30",
+            "hora": "19:05",
             "duracion": "10",
-            "image": "http://www.imperiosoft.com/wp-content/uploads/2011/06/Games-Icon.png",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI0NDcucG5n",
+            "title": "Leer un cuento.",
+            "description": "Es la hora de contar cuentos."
           },
           {
-            "hora": "19:32",
+            "hora": "20:00",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5ng",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "Ducharse",
+            "description": "Es la hora de ducharse."
           },
-          {
-            "hora": "20:13",
+		  {
+            "hora": "20:20",
             "duracion": "10",
-            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4NTkucG5n",
-            "title": "Titulo de 0303",
-            "description": "Descripcion de 0303"
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzI4Njc1LnBuZw==",
+            "title": "Cenar",
+            "description": "Nos sentamos en la silla porque es la hora de cenar."
+          },
+		  {
+            "hora": "21:00",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzIzMjYucG5n",
+            "title": "Lavarse los dientes.",
+            "description": "Después de cenar nos lavamos los dientes."
+          },
+		  {
+            "hora": "21:15",
+            "duracion": "10",
+            "image": "http://www.catedu.es/arasaac/classes/img/thumbnail.php?i=c2l6ZT0zMDAmcnV0YT0uLi8uLi9yZXBvc2l0b3Jpby9vcmlnaW5hbGVzLzExMjQ0LnBuZw==",
+            "title": "A la cama",
+            "description": "Es hora de descansar. Vamos a la cama."
           }
         ]
       }

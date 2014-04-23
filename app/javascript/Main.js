@@ -8,12 +8,15 @@ var Main = (function() {
 	var tareasSemana = [];
 	var tareasDeHoy = [];
 	var MINMANHANA = 7, MAXMANHANA = 13, MINTARDE = MAXMANHANA + 1, MAXTARDE = 20, MINNOCHE = MAXTARDE + 1, MAXNOCHE = 6;
-	var demoMode = false, horaDemo = 15, minutosDemo = 40;
+	var demoMode = true, horaDemo = 19, minutosDemo = 00;
 	var plantillaBodyPantallaDia;
 	var TAG = "main.js";
-
+	var listadoDiasSemanaESP=["Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo"];
+	var listadoMesesESP=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+	
 	function _onLoad() {
 		try {
+			addEventHandler(document, "keydown", _keyDown);
 			_enableKeys();
 			widgetAPI.sendReadyEvent();
 			// plantillaBodyPantallaDia = document.getElementById("allContent");
@@ -30,6 +33,16 @@ var Main = (function() {
 	}
 	;
 
+	
+	function addEventHandler(obj, eventName, handler) {
+		 alert("addEventHandler");
+		if (document.attachEvent) {
+			obj.attachEvent("on" + eventName, handler);
+		} else if (document.addEventListener) {
+			obj.addEventListener(eventName, handler, false);
+		}
+	}
+	
 	function _getDiaSemana() {
 		fechaActual = new Date();
 		if (demoMode) {
@@ -103,7 +116,7 @@ var Main = (function() {
 
 	function _incrementaMinutosDemo() {
 		if (minutosDemo < 59) {
-			horaDemo++;
+			minutosDemo++;
 		} else {
 			minutosDemo = 0;
 		}
@@ -111,7 +124,7 @@ var Main = (function() {
 
 	function _decrementaMinutosDemo() {
 		if (minutosDemo > 0) {
-			horaDemo--;
+			minutosDemo--;
 		} else {
 			minutosDemo = 59;
 		}
@@ -119,6 +132,7 @@ var Main = (function() {
 
 	function _pantallaDia() {
 		miLog.v(TAG, "pantallaDia");
+		tareasDeHoy = [];
 		// userList.init(Main.paintTareas);
 		userList.init(Main.restablecePantallaDia);
 	}
@@ -146,17 +160,16 @@ var Main = (function() {
 	}
 
 	function _pintaBarraHours() {
-		//miLog.v(TAG, "_pintaBarraHours" + tareasDeHoy.length);
-		
+		// miLog.v(TAG, "_pintaBarraHours" + tareasDeHoy.length);
+
 		capaBarraHours = document.getElementById("hours");
-		alert("capaBarraHours"+capaBarraHours);
+		alert("capaBarraHours" + capaBarraHours);
 		var escalaHoras = _getHora();
 
-		// var ulBarraHours = "<ul>"
-		// + "<li id=\"leftArrow\" class=\"arrows\"><img src=\"\"
-		// alt=\"leftArrow\"/></li>"
+		 var ulBarraHours = "<ul>"
+		 + "<li id=\"leftArrow\" class=\"arrows\"><img src=\"\"alt=\"leftArrow\"/></li>";
 		// + "<li><a href=\"#\">Ahora<i class=\"mañana\"></i></a></li>";
-		var ulBarraHours = "<ul><li><a href=\"#\">Ahora<span class=\"hour-icon hour-icon-"
+		 ulBarraHours += "<ul><li><a href=\"#\">Ahora<span class=\"hour-icon hour-icon-"
 				+ _getFranja(_getHora())
 				+ "\" data-type=\"icon\" style=\"display: block; top: 30px; background-position: left top;\"></span></a></li>";
 
@@ -168,9 +181,9 @@ var Main = (function() {
 		// alert("tareasDeHoy"+tareasDeHoy[0].hora);
 
 		var tareasBarra = 0;
-		
-		//miLog.v(TAG, "hora actal" + _getHora());
-		//document.getElementById("fecha").innerHTML = _getHora();
+
+		// miLog.v(TAG, "hora actal" + _getHora());
+		// document.getElementById("fecha").innerHTML = _getHora();
 		for ( var i = 0; i < tareasDeHoy.length; i++) {
 
 			// alert("tareasDeHoy[i].hora"+tareasDeHoy[i].hora);
@@ -196,7 +209,10 @@ var Main = (function() {
 			} else {
 				miLog.v(TAG, "tarea pasada");
 			}
-
+			if(i>=5)
+				{
+				break;
+				}
 		}
 
 		ulBarraHours += "</ul><div id=\"rightArrow\" class=\"arrows\"><a href=\"#\"></a></div>"
@@ -217,25 +233,22 @@ var Main = (function() {
 		miLog.d(TAG, "body vacio");
 	}
 
-	function _creaDivHTML(id, inner, appendTo,claseAsociada) {
+	function _creaDivHTML(id, inner, appendTo, claseAsociada) {
 		var element = document.createElement("div");
 		element.innerHTML = inner;
 		element.setAttribute('id', id);
-		
-		if(claseAsociada.length>0)
-			{
+
+		if (claseAsociada.length > 0) {
 			element.setAttribute('class', claseAsociada);
-			
-			}
-		
-		
+
+		}
+
 		if (appendTo === document.body) {
 			document.body.appendChild(element);
 		} else {
 			document.getElementById(appendTo).appendChild(element);
 		}
 
-		
 	}
 
 	function _creaImgHTML(classAtribute, source, appendTo) {
@@ -248,7 +261,8 @@ var Main = (function() {
 
 	function _restableceAnchor() {
 		miLog.d(TAG, "restablece Anchor");
-		document.body.innerHTML = "<a href=\"javascript:void(0);\" id=\"anchor\" onkeydown=\"Main.keyDown();\"></a>";
+		//document.body.innerHTML = "<a href=\"javascript:void(0);\" id=\"anchor\" onkeydown=\"Main.keyDown();\"></a>";
+		document.body.innerHTML = "<a href=\"javascript:void(0);\" id=\"anchor\"></a>";
 		// alert(document.body.innerHTML);
 		alert("anchor restablecido");
 	}
@@ -257,98 +271,143 @@ var Main = (function() {
 		_creaImgHTML("image-perfil", iconoUsu, "perfil");
 	}
 
-	
 	function _restableceBotonera() {
-		document.getElementById("nav").innerHTML="<ul>"+
-					"<li id=\"botonDay\" class=\"boton animate\">Ahora</li>"+
-					"<li id=\"botonWeek\" class=\"boton animate\">Semana</li>"+
-					"<li id=\"botonAlerts\" class=\"boton animate\">Alertas</li>"+
-					"<li id=\"botonGames\" class=\"boton animate\">Diversión</li>"+
-					"<li id=\"botonSettings\" class=\"boton animate\">Ajustes</li>"+
-					"<li id=\"botonExit\" class=\"boton animate\">Salir</li>"+
-				"</ul>";
+		document.getElementById("nav").innerHTML = "<ul>"
+				+ "<li id=\"botonDay\" class=\"boton animate\">Ahora</li>"
+				+ "<li id=\"botonWeek\" class=\"boton animate\">Semana</li>"
+				+ "<li id=\"botonAlerts\" class=\"boton animate\">Alertas</li>"
+				+ "<li id=\"botonGames\" class=\"boton animate\">Diversión</li>"
+				+ "<li id=\"botonSettings\" class=\"boton animate\">Ajustes</li>"
+				+ "<li id=\"botonExit\" class=\"boton animate\">Salir</li>"
+				+ "</ul>";
 	}
-	
+
 	function _restableceHeader(nombreUsu, iconoUsu) {
-		_creaDivHTML("header", "", document.body,"");		
-		_creaDivHTML("perfil", "", "header","");
-	
-		_restableceIconoUsu(nombreUsu,iconoUsu);
-		_creaDivHTML("name", nombreUsu, "perfil","");
+		_creaDivHTML("header", "", document.body, "");
+		_creaDivHTML("perfil", "", "header", "");
 
-		_creaDivHTML("nav", "", "header","");
+		_restableceIconoUsu(nombreUsu, iconoUsu);
+		_creaDivHTML("name", nombreUsu, "perfil", "");
+
+		_creaDivHTML("nav", "", "header", "");
 		_restableceBotonera();
+
 		
-		_creaDivHTML("fechaActual", "fechaActual", "header","");
-		_creaDivHTML("horaActual", _getHora(), "header","");
+		_creaDivHTML("fechaActual", _getStringFechaActual(), "header", "");
+		_creaDivHTML("horaActual","Son las "+_getHora()+" de la "+_getFranja(_getHora()), "header", "");
 	}
 
+	function _getStringFechaActual() {
+		var stringFechaActual="";
+		
+		alert(listadoDiasSemanaESP[_getDiaSemana()]);
+		stringFechaActual+=listadoDiasSemanaESP[_getDiaSemana()]+", "+fechaActual.getDate()+" de "+listadoMesesESP[fechaActual.getMonth()]+" de "+fechaActual.getFullYear();
+		return stringFechaActual;
+	}
+	
+	
+	
 	function _dibujaDigits(hora) {
-		var creaDigits="";
-		
-		
-		var cadaDigitHora = (hora).split(":");//<------------------------
-		
-		for ( var int = 0; int < 2; int++) {
-			creaDigits+="<div class=\"zero\">";
+		var creaDigits = "";
+
+		var cadaDigitHora = (hora).split(":");// <------------------------
+
+		var stringHora = cadaDigitHora[0] + cadaDigitHora[1];
+
+		alert(stringHora + "/*/*" + stringHora.length);
+
+		for ( var i = 0; i < stringHora.length; i++) {
 			
-			creaDigits+="<span class=\"d1\"></span>"+
-			"<span class=\"d2\"></span>"+
-			"<span class=\"d3\"></span>"+
-			"<span class=\"d4\"></span>"+
-			"<span class=\"d5\"></span>"+
-			"<span class=\"d6\"></span>"+
-			"<span class=\"d7\"></span>"+
-			"</div>";
+			alert("LEO:-->"+stringHora[i]);
+			creaDigits += "<div class=";
+			switch (stringHora[i]) {
+			case "0":
+				creaDigits += "\"zero\">";
+				break;
+
+			case "1":
+				creaDigits += "\"one\">";
+				break;
+
+			case "2":
+				creaDigits += "\"two\">";
+				break;
+
+			case "3":
+				creaDigits += "\"three\">";
+				break;
+
+			case "4":
+				creaDigits += "\"four\">";
+				break;
+
+			case "5":
+				creaDigits += "\"five\">";
+				break;
+
+			case "6":
+				creaDigits += "\"six\">";
+				break;
+
+			case "7":
+				creaDigits += "\"seven\">";
+				break;
+
+			case "8":
+				creaDigits += "\"eight\">";
+				break;
+
+			case "9":
+				creaDigits += "\"nine\">";
+				break;
+
+			default:
+				creaDigits += "\"zero\">";
+
+				break;
+			}
+
+			creaDigits += "<span class=\"d1\"></span>"
+					+ "<span class=\"d2\"></span>"
+					+ "<span class=\"d3\"></span>"
+					+ "<span class=\"d4\"></span>"
+					+ "<span class=\"d5\"></span>"
+					+ "<span class=\"d6\"></span>"
+					+ "<span class=\"d7\"></span>" + "</div>";
+
+			if (i == 1) {
+				creaDigits +="<div class=\"dots\"></div>";
+			}
+
 		}
-		
-		creaDigits+="<div class=\"dots\"></div>";
-		
-		for ( var int = 0; int < 2; int++) {
-			creaDigits+="<div class=\"zero\">";
-			
-			creaDigits+="<span class=\"d1\"></span>"+
-			"<span class=\"d2\"></span>"+
-			"<span class=\"d3\"></span>"+
-			"<span class=\"d4\"></span>"+
-			"<span class=\"d5\"></span>"+
-			"<span class=\"d6\"></span>"+
-			"<span class=\"d7\"></span>"+
-			"</div>";
-		}
-		
-		
+
+
+
 		return creaDigits;
-								
+
 	}
-	
-	function _restableceContent(titulo,icono,desc,hora) {
-		_creaDivHTML("content", "", document.body,"");
-		_creaDivHTML("info", "", "content","");
-		_creaDivHTML("tituloActividad", "<h1>"+titulo+"</h1>", "info","");
-		_creaDivHTML("iconoActividad","","info","");
-		_creaImgHTML("", icono, "iconoActividad","");
-		_creaDivHTML("descripcionActividad", desc, "info","");
-		_creaDivHTML("horaActividad", "<h3>Hora: "+hora+"</h3>", "info","");
 
-		
-		_creaDivHTML("clock", "", "horaActividad","light");
-		_creaDivHTML("display", "", "clock","display");
-		_creaDivHTML("", "", "display","weekdays");
-		_creaDivHTML("", "", "display","ampm");
-		_creaDivHTML("", "", "display","alarm");
-		_creaDivHTML("",  _dibujaDigits("07:15"), "display","digits");
+	function _restableceContent(titulo, icono, desc, hora) {
+		_creaDivHTML("content", "", document.body, "");
+		_creaDivHTML("info", "", "content", "");
+		_creaDivHTML("tituloActividad", "<h1>" + titulo + "</h1>", "info", "");
+		_creaDivHTML("iconoActividad", "", "info", "");
+		_creaImgHTML("", icono, "iconoActividad", "");
+		_creaDivHTML("descripcionActividad", desc, "info", "");
+		_creaDivHTML("horaActividad", "<h3>Hora:</h3>", "info", "");
 
-		
-	
-		
+		_creaDivHTML("clock", "", "horaActividad", "light");
+		_creaDivHTML("display", "", "clock", "display");
+		_creaDivHTML("", "", "display", "weekdays");
+		_creaDivHTML("", "", "display", "ampm");
+		_creaDivHTML("", "", "display", "alarm");
+		_creaDivHTML("", _dibujaDigits(hora), "display", "digits");
 
-		
-		_creaDivHTML("hours", "", "content","");
-		//_creaDivHTML("hours", "", "content");
-		
+		_creaDivHTML("hours", "", "content", "");
+		// _creaDivHTML("hours", "", "content");
+
 	}
-	
+
 	function _restablecePantallaDia(jsonDataRecv) {
 		_borraTodoElBody();
 		_restableceAnchor();
@@ -362,21 +421,19 @@ var Main = (function() {
 		// JsonArray de 0 y de 1 son nombre usuario e icono usuario
 		_restableceHeader(jsonArray[0], jsonArray[1]);
 		alert("Header Restablecido");
-		
-		
-		////////
-//210414se puede optimizar, me hace falta para pintar solo la proxima tarea
-		
+
+		// //////
+		// 210414se puede optimizar, me hace falta para pintar solo la proxima
+		// tarea
+
 		for ( var i = 0; i < (tareasSemana[_getDiaSemana()].tarea).length; i++) {
 
 			alert(tareasSemana[_getDiaSemana()].tarea[i].hora);
 			tareasDeHoy.push(tareasSemana[_getDiaSemana()].tarea[i]);
 		}
-		
-		
-		
-		var titulo,icono,desc,hora;
-		
+
+		var titulo, icono, desc, hora;
+
 		for ( var i = 0; i < tareasDeHoy.length; i++) {
 
 			// alert("tareasDeHoy[i].hora"+tareasDeHoy[i].hora);
@@ -391,18 +448,17 @@ var Main = (function() {
 
 			if (minDiaTarea >= _getMinutesTotalDia()) {
 				miLog.v(TAG, "tarea futura");
-				
-				
+
 				alert("prueba 2104");
 				alert(tareasDeHoy[i].title);
 				alert(tareasDeHoy[i].image);
 				alert(tareasDeHoy[i].description);
 				alert(tareasDeHoy[i].hora);
-				
-				titulo=tareasDeHoy[i].title;
-				icono=tareasDeHoy[i].image;
-				desc=tareasDeHoy[i].description;
-				hora=tareasDeHoy[i].hora;
+
+				titulo = tareasDeHoy[i].title;
+				icono = tareasDeHoy[i].image;
+				desc = tareasDeHoy[i].description;
+				hora = tareasDeHoy[i].hora;
 				alert("prueba 2104");
 				break;
 
@@ -412,30 +468,23 @@ var Main = (function() {
 
 		}
 
-		
-//210414	
-		////////
-		
-		
-		
-		
-		//alert(titulo);
-	//	alert(icono);
-	//	alert(desc);
-	//	alert(hora);
-		_restableceContent(titulo,icono,desc,hora);// <----------------------------
+		// 210414
+		// //////
+
+		// alert(titulo);
+		// alert(icono);
+		// alert(desc);
+		// alert(hora);
+		_restableceContent(titulo, icono, desc, hora);// <----------------------------
 		alert("voy a pintar la barra de horas");
 		_pintaBarraHours();
 		alert("Content Restablecido");
-		
-		
-		
 
-		_creaDivHTML("id3", "prueba3");
-		_creaImgHTML(
-				"prueba",
-				"http://rlv.zcache.es/pequeno_icono_del_ciclomotor_pegatina-r5c3585660891443c983ac62adf063005_v9waf_8byvr_512.jpg",
-				"id3");
+	//	_creaDivHTML("id3", "prueba3");
+	//	_creaImgHTML(
+		//		"prueba",
+		//		"http://rlv.zcache.es/pequeno_icono_del_ciclomotor_pegatina-r5c3585660891443c983ac62adf063005_v9waf_8byvr_512.jpg",
+		//		"id3");
 		// alert(document.body.innerHTML);
 	}
 
@@ -638,10 +687,10 @@ var Main = (function() {
 			break;
 		case tvKey.KEY_2:
 			alert("2");
-			resetButtons();
+			//resetButtons();
 			_incrementaHoraDemo();
-			_pantallaDia();
-
+			//_pantallaDia();
+			_onLoad();
 			// widgetAPI.putInnerHTML(info, "Has pulsado 2");
 			break;
 		case tvKey.KEY_3:
@@ -651,9 +700,10 @@ var Main = (function() {
 			break;
 		case tvKey.KEY_4:
 			alert("4");
-			resetButtons();
+			//resetButtons();
 			_decrementaMinutosDemo();
-			_pantallaDia();
+			//_pantallaDia();
+			_onLoad();
 			// widgetAPI.putInnerHTML(info, "Has pulsado 4");
 			break;
 		case tvKey.KEY_5:
@@ -663,9 +713,10 @@ var Main = (function() {
 			break;
 		case tvKey.KEY_6:
 			alert("6");
-			resetButtons();
+			//resetButtons();
 			_incrementaMinutosDemo();
-			_pantallaDia();
+			//_pantallaDia();
+			_onLoad();
 			// widgetAPI.putInnerHTML(info, "Has pulsado 6");
 			break;
 		case tvKey.KEY_7:
@@ -675,9 +726,10 @@ var Main = (function() {
 			break;
 		case tvKey.KEY_8:
 			alert("8");
-			resetButtons();
+			//resetButtons();
 			_decrementaHoraDemo();
-			_pantallaDia();
+			//_pantallaDia();
+			_onLoad();
 			// widgetAPI.putInnerHTML(info, "Has pulsado 8");
 			break;
 		case tvKey.KEY_9:
