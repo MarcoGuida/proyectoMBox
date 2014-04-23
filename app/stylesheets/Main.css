@@ -188,6 +188,10 @@ border-left-color: #3178C0;*/
 
 }
 
+#diaSemana {
+	margin: 5px 10px;
+}
+
 #tituloActividad h1, #diaSemana h1 {
 	padding: 5px 15px;
 	font-size: 30px;
@@ -378,6 +382,60 @@ border-left-color: #3178C0;*/
 .day-icon-domingo {
     background-image: url("../../Imagenes/letraD.jpg");
     background-size: 50px auto;
+}
+
+#mañana, #tarde, #noche {
+	display:block;
+	width: 1180px;
+	height: 100px;
+	float: left;
+}
+
+.mañana-list li, .tarde-list li, .noche-list li {
+    background-color: #F9F9F9;
+    border: 1px solid #FFFFFF;
+    float: left;
+    /*font-size: 10px;*/
+    height: 100px;
+    line-height: 1.4;
+    padding: 10px;
+    text-align: center;
+    width: 7%;
+    text-decoration: none;
+    display:inline;
+}
+
+.week-icon, #icon-actividad img {
+    background-color: rgba(0, 0, 0, 0);
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 80px;
+    /*left: 50px;*/
+    position: absolute;
+    /*top: 30px;*/
+    width: 80px;
+    display:block;
+}
+
+.icon-mañana {
+    background-image: url("../../Imagenes/amanecer.png");
+    background-size: 90px auto;
+}
+
+.icon-tarde {
+    background-image: url("../../Imagenes/atardecer.png");
+    background-size: 90px auto;
+}
+
+.icon-noche {
+    background-image: url("../../Imagenes/noche.png");
+    background-size: 90px auto;
+}
+
+.week-text {
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
 }
 
 #advertisement {
